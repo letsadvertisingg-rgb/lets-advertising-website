@@ -1,0 +1,161 @@
+<section class="section top-comapnies"><div class="container streatch"><div class="column grid"><div class="top-comapnies-left"><h2 class="heading-style-h3 text-weight-bold ch14">Top companies use Pay.com for:</h2></div><div class="top-companies-right"><img src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69df77e3b18552d426dfc797_Vector%20(3).svg" loading="lazy" alt=""><div class="right-rotate-wrapper"><div class="right-companies-wrapper"><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>iGaming &amp; Sports Betting</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>eCommerce &amp; Retail</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>Digital Media &amp; Streaming</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>SaaS &amp; Software Platforms</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>Travel &amp; Hospitality</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>Crypto &amp; Digital Assets</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>WealthTech &amp; Investment Platforms</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>iGaming &amp; Sports Betting</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>eCommerce &amp; Retail</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>Digital Media &amp; Streaming</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>SaaS &amp; Software Platforms</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>Travel &amp; Hospitality</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>Crypto &amp; Digital Assets</strong></div><div data-anim="text-rotate" class="heading-style-h3 text-weight-bold"><strong>WealthTech &amp; Investment Platforms</strong></div></div><div class="gradient-right"></div><div class="gradient-right top"></div></div></div></div></div><div class="script w-embed w-script"><style>
+
+  @media screen and (max-width: 767px) {
+  .right-companies-wrapper {
+    max-width: 85% !important;
+  }
+}
+.right-rotate-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.right-companies-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+[data-anim="text-rotate"] {
+  opacity: 0.25;
+  transform: translateX(0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  cursor: default;
+}
+[data-anim="text-rotate"].is-active {
+  opacity: 1;
+  transform: translateX(56px);
+}
+</style>
+
+<script>
+(function () {
+  const outerWrapper = document.querySelector('.top-companies-right');
+  const logo         = outerWrapper?.querySelector('img');
+  const wrapper      = document.querySelector('.right-rotate-wrapper');
+  const list         = document.querySelector('.right-companies-wrapper');
+
+  if (!wrapper || !list || !logo) {
+    console.error('[Rotate] nije pronađeno');
+    return;
+  }
+
+  const oldTrack = wrapper.querySelector('div[style*="will-change"]');
+  if (oldTrack) {
+    while (oldTrack.firstChild) wrapper.insertBefore(oldTrack.firstChild, oldTrack);
+    oldTrack.remove();
+  }
+
+  const TOTAL = 7;
+  const PAUSE = 1200;
+  const ANIM  = 400;
+
+  const track = document.createElement('div');
+  track.style.cssText = 'width:100%; will-change:transform; position:relative;';
+  list.style.cssText  = 'display:flex; flex-direction:column; width:100%;';
+  wrapper.insertBefore(track, wrapper.firstChild);
+  track.appendChild(list);
+
+  let items        = [];
+  let offsets      = [];
+  let heights      = [];
+  let cachedTarget = 0;
+  let startIdx     = 0;
+  let startY       = 0;
+  let currentIdx   = 0;
+  let currentY     = 0;
+  let stepCount    = 0;
+  let animating    = false;
+  let resizeTimer;
+
+  function measure() {
+    track.style.transition = 'none';
+    track.style.transform  = 'translateY(0px)';
+    track.offsetHeight;
+
+    items   = Array.from(list.querySelectorAll('[data-anim="text-rotate"]'));
+    offsets = items.map(el => el.offsetTop);
+    heights = items.map(el => el.offsetHeight);
+
+    const logoBCR    = logo.getBoundingClientRect();
+    const wrapperBCR = wrapper.getBoundingClientRect();
+    const logoCenter = logoBCR.top + logoBCR.height / 2;
+    const wrapperTop = wrapperBCR.top;
+    cachedTarget     = logoCenter - wrapperTop;
+
+    let best = 0, bestDist = Infinity;
+    for (let i = 0; i < TOTAL; i++) {
+      const d = Math.abs(offsets[i] + heights[i] / 2 - cachedTarget);
+      if (d < bestDist) { bestDist = d; best = i; }
+    }
+    startIdx = best;
+    startY   = -(offsets[startIdx] + heights[startIdx] / 2 - cachedTarget);
+
+    if (items.length) {
+      activate(currentIdx);
+      setY(targetFor(currentIdx), false);
+    }
+  }
+
+  function targetFor(idx) {
+    return -(offsets[idx] + heights[idx] / 2 - cachedTarget);
+  }
+
+  function setY(y, anim) {
+    track.style.transition = anim ? `transform ${ANIM}ms cubic-bezier(0.4,0,0.2,1)` : 'none';
+    track.style.transform  = `translateY(${y}px)`;
+    currentY = y;
+  }
+
+  function activate(idx) {
+    items.forEach((el, i) => el.classList.toggle('is-active', i === idx));
+  }
+
+  function next() {
+    if (animating) return;
+    animating = true;
+
+    const nextIdx = currentIdx + 1;
+    stepCount++;
+
+    currentIdx = nextIdx;
+    activate(nextIdx);
+    setY(targetFor(nextIdx), true);
+
+    setTimeout(() => {
+      if (stepCount === TOTAL) {
+        stepCount = 0;
+        items.forEach(el => el.style.transition = 'none');
+        currentIdx = startIdx;
+        activate(startIdx);
+        setY(targetFor(startIdx), false);
+        track.offsetHeight;
+        items.forEach(el => el.style.transition = '');
+      }
+      animating = false;
+      requestAnimationFrame(() => setTimeout(next, PAUSE));
+    }, ANIM);
+  }
+
+  function init() {
+    measure();
+
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(measure, 150);
+    });
+
+    items.forEach(el => el.classList.remove('is-active'));
+    currentIdx = startIdx;
+    stepCount  = 0;
+    activate(startIdx);
+    setY(startY, false);
+
+    setTimeout(next, PAUSE);
+  }
+
+  document.fonts.ready.then(init);
+})();
+</script></div></section>

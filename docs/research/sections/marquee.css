@@ -1,0 +1,238 @@
+.section {
+  padding-top: var(--size--8xl);
+  padding-bottom: var(--size--8xl);
+  flex-flow: column;
+  align-items: center;
+  display: flex;
+}
+
+.section.marquee {
+  padding-top: var(--size--4xl);
+  padding-bottom: var(--size--4xl);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container--main-size);
+  padding-right: var(--container--size-padding);
+  padding-left: var(--container--size-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  z-index: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.heading-style-h6 {
+  color: var(--color--text);
+  font-size: var(--typography--h6);
+  letter-spacing: -.02em;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-weight-bold {
+  font-weight: 600;
+}
+
+.flex-vertical {
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.flex-vertical.gap-4xl {
+  grid-column-gap: var(--size--4xl);
+  grid-row-gap: var(--size--4xl);
+}
+
+.marquee-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.marquee-left-overlay {
+  z-index: 1;
+  object-fit: fill;
+  background-image: linear-gradient(90deg,#fff,#0000);
+  width: 100px;
+  position: absolute;
+  inset: 0% auto 0% 0%;
+}
+
+.marquee-right-overlay {
+  object-fit: fill;
+  background-image: linear-gradient(90deg,#0000,#fff);
+  width: 100px;
+  position: absolute;
+  inset: 0% 0% 0% auto;
+}
+
+.marquee-css-wrapper {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  color: #efeeec;
+  background-color: #0000;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  position: static;
+  overflow: hidden;
+}
+
+.marquee-css-list {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  position: static;
+}
+
+.marquee-css-item {
+  grid-column-gap: 0em;
+  grid-row-gap: 0em;
+  flex: 0;
+  justify-content: center;
+  align-items: center;
+  min-width: 10rem;
+  max-width: 10rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  display: flex;
+}
+
+.marquee-css-item.express {
+  margin-left: 1rem;
+}
+
+.marque-css-item-logo {
+  box-sizing: border-box;
+  object-fit: cover;
+  width: 100%;
+  min-width: 10rem;
+  max-width: 10rem;
+  height: 100%;
+  max-height: 2.5rem;
+  overflow: visible;
+}
+
+@media screen and (max-width:991px) {
+.section {
+  padding-top: var(--size--6xl);
+  padding-bottom: var(--size--6xl);
+}
+
+.column {
+  width: 100%;
+}
+
+.heading-style-h6 {
+  font-size: var(--typography--h6-tablet);
+}
+
+.marquee-css-wrapper {
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+}
+
+.marquee-css-list {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  width: auto;
+  min-width: auto;
+  padding-right: 0;
+}
+}
+
+@media screen and (max-width:767px) {
+.section {
+  padding-top: var(--size--5xl);
+  padding-bottom: var(--size--5xl);
+}
+
+.section.marquee {
+  padding-top: var(--size--2xl);
+  padding-bottom: var(--size--2xl);
+}
+
+.column {
+  overflow: hidden;
+}
+
+.heading-style-h6 {
+  font-size: var(--typography--h6-mobile);
+}
+
+.marquee-css-list {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  width: auto;
+  min-width: auto;
+}
+
+.marquee-css-item {
+  min-width: 7.5rem;
+  max-width: 7.5rem;
+  min-height: 30px;
+  max-height: 25px;
+}
+
+.marque-css-item-logo {
+  min-width: 8rem;
+  max-width: 8rem;
+  min-height: 30px;
+}
+}
+
+@media screen and (max-width:479px) {
+.column {
+  overflow: visible;
+}
+
+.marquee-css-wrapper {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+}
+
+.marquee-css-list {
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+  flex: none;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.marquee-css-item {
+  min-width: 6rem;
+  max-width: 6rem;
+  min-height: 20px;
+  max-height: 20px;
+}
+
+.marque-css-item-logo {
+  min-width: 6.5rem;
+  max-width: 6.5rem;
+  min-height: 20px;
+  max-height: 20rem;
+}
+}

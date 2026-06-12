@@ -1,0 +1,173 @@
+<section class="section scale"><div class="container"><div class="column"><div class="scale-wrapper"><h2 class="heading-style-h2 text-weight-bold ch12">Scale proven at volume</h2><div class="bento-grid"><div class="bento-left ratio"><img class="bg-image-big custom" src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0fb2295ba1f45961c8367_img.webp" alt="" sizes="100vw" data-anim="paralax" loading="lazy" srcset="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0fb2295ba1f45961c8367_img-p-500.webp 500w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0fb2295ba1f45961c8367_img-p-800.webp 800w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0fb2295ba1f45961c8367_img-p-1080.webp 1080w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0fb2295ba1f45961c8367_img.webp 1256w"><div class="bento-inner-wrapp"><div class="heading-style-h1 text-weight-bold text-color-white"><span data-anim="count-span">99.999</span>%</div><div class="text-l">historical uptime</div></div></div><div id="w-node-_52ff382c-14c4-f30d-3521-99bba3708c4e-d332d838" class="bento-grid-inner"><div class="bento-box"><div class="bento-inner-wrapp"><div class="heading-style-h1 text-weight-bold"><span data-anim="count-span">3</span>x</div><div class="text-l text-color-black">faster merchant onboarding than the industry standard</div></div></div><div class="bento-box blue"><div class="bento-inner-wrapp"><div class="heading-style-h1 text-weight-bold text-color-white"><span data-anim="count-span">98</span>%</div><div class="text-l">of customer payments volume</div></div></div><div id="w-node-b0e05fa7-7b15-00b2-d7cd-7ab428e52e20-d332d838" class="bento-bottom"><img src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69de472514bc1dda09a86870_Vector%20(50).svg" loading="lazy" alt="" class="background-image-bottom"><div class="bento-inner-wrapp"><div class="heading-style-h1 text-weight-bold">$ billions</div><div class="text-l text-color-black">processed every month</div></div></div></div></div></div></div></div><div class="script w-embed w-script"><style>
+  [data-anim="paralax"] {
+  transform-origin: center center;
+  scale: 1.2;
+}
+</style>
+
+<script>
+(function () {
+
+  function initCounters() {
+    document.querySelectorAll('[data-anim="count-span"]').forEach(span => {
+      const original = span.textContent.trim();
+
+      const prefixMatch = original.match(/^[^0-9]*/);
+      const prefix = prefixMatch ? prefixMatch[0] : '';
+
+      const suffixMatch = original.match(/[^0-9.]+$/);
+      const suffix = suffixMatch ? suffixMatch[0] : '';
+
+      const numberMatch = original.match(/[\d.]+/);
+      if (!numberMatch) return;
+      const numberStr = numberMatch[0];
+      const hasDecimal = numberStr.includes('.');
+      const [intPart, decPart] = numberStr.split('.');
+      const digits = intPart.split('');
+
+      span.style.display = 'inline-flex';
+      span.style.alignItems = 'flex-end';
+      span.style.overflow = 'visible';
+      span.style.position = 'relative';
+      span.style.letterSpacing = 'inherit';
+      span.innerHTML = '';
+
+      if (prefix) {
+        const p = document.createElement('span');
+        p.textContent = prefix;
+        p.style.letterSpacing = 'inherit';
+        span.appendChild(p);
+      }
+
+      const slots = [];
+
+      digits.forEach((digit) => {
+        const slot = document.createElement('span');
+        slot.style.cssText = `
+          display: inline-block;
+          overflow: hidden;
+          vertical-align: bottom;
+          position: relative;
+          height: 1.1em;
+          width: 0.55em;
+          letter-spacing: 0;
+        `;
+        const inner = document.createElement('span');
+        inner.style.cssText = `
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transition: none;
+          letter-spacing: 0;
+        `;
+        const d = parseInt(digit);
+        for (let n = 0; n <= d; n++) {
+          const num = document.createElement('span');
+          num.style.cssText = `display: block; height: 1.1em; line-height: 1.1em; text-align: left; letter-spacing: 0;`;
+          num.textContent = n;
+          inner.appendChild(num);
+        }
+        slot.appendChild(inner);
+        span.appendChild(slot);
+        slots.push(inner);
+      });
+
+      if (hasDecimal && decPart) {
+        const dot = document.createElement('span');
+        dot.textContent = '.';
+        dot.style.letterSpacing = '0';
+        span.appendChild(dot);
+
+        decPart.split('').forEach((digit) => {
+          const slot = document.createElement('span');
+          slot.style.cssText = `
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: bottom;
+            position: relative;
+            height: 1.1em;
+            width: 0.55em;
+            letter-spacing: 0;
+          `;
+          const inner = document.createElement('span');
+          inner.style.cssText = `
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: none;
+            letter-spacing: 0;
+          `;
+          const d = parseInt(digit);
+          for (let n = 0; n <= d; n++) {
+            const num = document.createElement('span');
+            num.style.cssText = `display: block; height: 1.1em; line-height: 1.1em; text-align: left; letter-spacing: 0;`;
+            num.textContent = n;
+            inner.appendChild(num);
+          }
+          slot.appendChild(inner);
+          span.appendChild(slot);
+          slots.push(inner);
+        });
+      }
+
+      if (suffix) {
+        const s = document.createElement('span');
+        s.textContent = suffix;
+        s.style.letterSpacing = 'inherit';
+        span.appendChild(s);
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          observer.disconnect();
+
+          slots.forEach((inner, i) => {
+            const delay = i * 120;
+            const duration = 1200 + i * 150;
+            setTimeout(() => {
+              inner.style.transition = `transform ${duration}ms cubic-bezier(0.25, 1, 0.5, 1)`;
+              inner.style.transform = `translateY(calc(-100% + 1.1em))`;
+            }, delay);
+          });
+        });
+      }, { threshold: 0.8 });
+
+      observer.observe(span);
+    });
+  }
+
+  function initParallax() {
+    const items = [];
+
+    document.querySelectorAll('[data-anim="paralax"]').forEach(img => {
+      img.style.willChange = 'transform';
+      items.push(img);
+    });
+
+    if (!items.length) return;
+
+    function onScroll() {
+      items.forEach(img => {
+        const rect = img.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const progress = (vh - rect.top) / (vh + rect.height);
+        const clamp = Math.min(Math.max(progress, 0), 1);
+        const offset = (clamp - 0.5) * -8;
+        img.style.transform = `translateY(${offset}%)`;
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  function init() {
+    initCounters();
+    initParallax();
+  }
+
+  window.Webflow ? window.Webflow.push(init) : window.addEventListener('DOMContentLoaded', init);
+
+})();
+</script></div></section>

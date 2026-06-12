@@ -1,0 +1,62 @@
+<section data-w-id="45b05d94-626a-0038-da65-dbdfe5984e46" style="opacity:0" class="section faq"><div class="container"><div class="column max-width-468 text-center full-center"><h2 class="text-weight-bold">Frequently asked questions</h2></div><div class="column margin-top-5xl"><div class="faq-wrapper"><div class="w-dyn-list"><div role="list" class="w-dyn-items"><div role="listitem" class="faq-item-wrapper w-dyn-item"><div class="faq-item"><div class="faq-heading-wrapper"><div class="heading-style-h6 text-weight-bold">Does Pay.com support SMBs as well as enterprise merchants?</div><div class="faq-circle"><div class="faq-plus-vertical"></div><div class="faq-plus-horizontal"></div></div></div><div class="faq-paragraph-wrapper"><div class="faq-paragraph"><div class="text-m text-color-charcoal w-richtext"><p>Yes. SMBs get a no-code drop-in checkout, transparent flat-rate pricing, and self-serve onboarding, while enterprise customers get bespoke commercials, dedicated account management, and access to advanced orchestration features like custom routing rules and multi-acquirer setups.</p></div></div></div></div></div><div role="listitem" class="faq-item-wrapper w-dyn-item"><div class="faq-item"><div class="faq-heading-wrapper"><div class="heading-style-h6 text-weight-bold">How fast can I get started and go live?</div><div class="faq-circle"><div class="faq-plus-vertical"></div><div class="faq-plus-horizontal"></div></div></div><div class="faq-paragraph-wrapper"><div class="faq-paragraph"><div class="text-m text-color-charcoal w-richtext"><p>Most merchants complete onboarding and start accepting payments within days, not weeks. Developers get sandbox access immediately, and the drop-in checkout or API typically lets you go live in under a week.</p></div></div></div></div></div><div role="listitem" class="faq-item-wrapper w-dyn-item"><div class="faq-item"><div class="faq-heading-wrapper"><div class="heading-style-h6 text-weight-bold">Does Pay.com act as the acquirer, or does it connect to third-party acquirers?</div><div class="faq-circle"><div class="faq-plus-vertical"></div><div class="faq-plus-horizontal"></div></div></div><div class="faq-paragraph-wrapper"><div class="faq-paragraph"><div class="text-m text-color-charcoal w-richtext"><p>Both. Pay.com offers its own licensed acquiring in key markets and also connects to third-party acquirers, banks, and APM providers worldwide. That means you can use Pay.com end-to-end or keep your existing providers and let Pay.com orchestrate across them.</p></div></div></div></div></div><div role="listitem" class="faq-item-wrapper w-dyn-item"><div class="faq-item"><div class="faq-heading-wrapper"><div class="heading-style-h6 text-weight-bold">What is Pay.com and how does it work?</div><div class="faq-circle"><div class="faq-plus-vertical"></div><div class="faq-plus-horizontal"></div></div></div><div class="faq-paragraph-wrapper"><div class="faq-paragraph"><div class="text-m text-color-charcoal w-richtext"><p>Pay.com is an all-in-one payment infrastructure that lets merchants accept online payments through a single, unified platform. It combines a payment gateway, acquiring, orchestration, a token vault, and analytics, so you plug in once and route, optimize, and settle payments globally without stitching together separate vendors.</p></div></div></div></div></div></div></div><div class="faq-hidden w-embed"><style>
+/* Svaki drugi FAQ item (2, 4, 6, 8...) bez bordera */
+.faq-item-wrapper:nth-child(even) .faq-item{
+  border-top: none !important;
+  border-bottom: none !important;
+}
+  .faq-item-wrapper:last-child .faq-item{
+  border-bottom: 1px solid #ececec !important;
+}
+</style></div></div><div class="max-width-374 center flex-vertical gap-2xl"><p class="text-l text-color-black">Have more questions? Get all the answers.</p><a aria-label="staggering button" data-wf--button--variant="secondary-black" href="/faq" class="btn-animate-chars w-variant-fce8d253-9807-53a1-7ac2-e1c613fcae74 w-inline-block"><div class="btn-animate-chars__bg w-variant-fce8d253-9807-53a1-7ac2-e1c613fcae74"></div><span data-button-animate-chars="" class="btn-animate-chars__text w-variant-fce8d253-9807-53a1-7ac2-e1c613fcae74">View all FAQs</span></a></div></div></div><div class="script w-embed w-script"><style>
+.faq-paragraph-wrapper {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+  height: auto !important;
+}
+.faq-paragraph-wrapper > .faq-paragraph {
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  transition: padding-top 0.35s ease;
+}
+.faq-paragraph-wrapper.is-active {
+  grid-template-rows: 1fr;
+}
+.faq-paragraph-wrapper.is-active > .faq-paragraph {
+  padding-top: 1.5rem;
+}
+.faq-plus-vertical {
+  transition: transform 0.35s ease;
+  transform-origin: center center;
+}
+.faq-item---first.is-open .faq-plus-vertical,
+.faq-item.is-open .faq-plus-vertical {
+  transform: rotate(90deg);
+}
+</style>
+<script>
+(function () {
+  document.querySelectorAll('.faq-paragraph-wrapper').forEach(w => {
+    w.classList.remove('is-active');
+    w.style.removeProperty('height');
+  });
+  const items = document.querySelectorAll('.faq-item, .faq-item---first');
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const wrapper = item.querySelector('.faq-paragraph-wrapper');
+      if (!wrapper) return;
+      const isAlreadyActive = wrapper.classList.contains('is-active');
+      document.querySelectorAll('.faq-paragraph-wrapper.is-active')
+        .forEach(w => w.classList.remove('is-active'));
+      document.querySelectorAll('.faq-item.is-open, .faq-item---first.is-open')
+        .forEach(el => el.classList.remove('is-open'));
+      if (!isAlreadyActive) {
+        wrapper.classList.add('is-active');
+        item.classList.add('is-open');
+      }
+    });
+  });
+})();
+</script></div></section>

@@ -1,0 +1,77 @@
+<section class="section cta"><div class="container is-relative"><div class="cta-wrapper"><a href="/book-a-demo" class="cta-button w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e098455e803163dc03c916_Group%208942993.svg" alt="" class="image-default"><div class="cta-text-wrapper"><div class="cta-text">Book a Demo</div></div></a><div class="text-is-relative"><span class="text-weight-bold">Ready to unlock your full revenue potential?</span> Capture missing revenue with intelligent routing and gain centralised control of your payments.</div></div></div><div class="cta-bg-wrapper"><img loading="lazy" src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0968cc6f3f599094d24f1_Frame%208943584.svg" alt="" class="cta-background"></div><div class="script w-embed w-script"><style>
+.image-default {
+  width: 149px;
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.cta-text-wrapper {
+  position: relative;
+  inset: 0% 0px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--color--text-alternative);
+  font-size: 72px;
+  line-height: 1.3em;
+  transition: transform 0.4s ease;
+}
+
+.cta-button:hover .image-default,
+.cta-button.-wfp-hover .image-default {
+  /* pomera sliku do desne ivice:
+     100% = širina samog elementa, pa dodamo još padding (16px) */
+  transform: translateX(calc(var(--btn-width, 0px) - 149px - 32px));
+}
+
+.cta-button:hover .cta-text-wrapper,
+.cta-button.-wfp-hover .cta-text-wrapper {
+  transform: translateX(-20%);
+}
+  
+.cta-button {
+  overflow: clip;
+}
+  
+.cta-bg-wrapper {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .image-default {
+    max-width: 60px;
+  }
+  .cta-button:hover .image-default,
+  .cta-button.-wfp-hover .image-default {
+    transform: translateX(calc(var(--btn-width, 0px) - 60px - 12px));
+  }
+}
+</style>
+
+<script>
+(function () {
+  const buttons = document.querySelectorAll('.cta-button');
+  const bgs     = document.querySelectorAll('.cta-bg-wrapper');
+
+  // Postavi --btn-width kao CSS varijablu na svaki button
+  // da translateX zna do kud da ide
+  function setWidths() {
+    buttons.forEach(btn => {
+      btn.style.setProperty('--btn-width', btn.offsetWidth + 'px');
+    });
+  }
+
+  setWidths();
+  window.addEventListener('resize', setWidths);
+
+  // bg hover
+  buttons.forEach((btn, i) => {
+    const bg = bgs[i] || document.querySelector('.cta-bg-wrapper');
+    if (!bg) return;
+    btn.addEventListener('mouseenter', () => bg.style.opacity = '1');
+    btn.addEventListener('mouseleave', () => bg.style.opacity = '0');
+  });
+})();
+</script></div><div class="container apsolute-bottom"><div class="devider-line"></div></div></section>

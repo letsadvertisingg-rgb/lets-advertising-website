@@ -1,0 +1,375 @@
+<section class="section roi"><div class="column full-width custom-layout-roi"><div class="roi-left-wrapper"><a aria-label="Go to home page" href="/" aria-current="page" class="pay-img-holder w-inline-block w--current"><img src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69df773a3a47105b9058436b_Frame%202147257218.webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69df773a3a47105b9058436b_Frame%202147257218-p-500.png 500w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69df773a3a47105b9058436b_Frame%202147257218.webp 1142w" alt="" class="full-width full-height custom-roi-ratio"></a><div class="flex-vertical gap-1-5xl max-width-413"><div class="heading-style-h4 text-color-white text-weight-bold">See the revenue you’re leaving behind</div><p class="text-l text-color-white _80">Discover how much additional revenue you could generate by improving your approval rates through intelligent payment orchestration.</p></div></div><div class="roi-right-wrapper"><div class="bg-background-wrapper mobile"><img src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0c1ea7719188567455158_img%20(12).webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0c1ea7719188567455158_img%20(12)-p-500.webp 500w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0c1ea7719188567455158_img%20(12)-p-800.webp 800w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e0c1ea7719188567455158_img%20(12).webp 827w" alt="" class="bg-image roi"></div><div class="roi-calc w-embed w-script"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.roi-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  width: 100%;
+  max-width: 37.5rem;
+  height: 37.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .roi-card { height: auto; }
+}
+.roi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.heading-style-h5 { font-size: 24px; font-weight: 600; color: #000000; letter-spacing: -0.3px; }
+.currency-btn { display: flex; align-items: center; gap: 8px; background: none; border: none; cursor: pointer; font-size: 15px; font-weight: 600; color: #0a0a0a; padding: 6px 10px; border-radius: 8px; }
+.currency-btn:hover { background: #f3f4f6; }
+.currency-dropdown { position: absolute; top: 56px; right: 0; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); z-index: 101; min-width: 240px; overflow: hidden; padding: 8px; display: flex; flex-direction: column; gap: 2px; }
+.currency-option { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; cursor: pointer; font-size: 14px; border-radius: 10px; transition: background 0.15s; }
+.currency-option:hover { background: #f3f4f6; }
+.curr-left { display: flex; align-items: center; gap: 10px; }
+.curr-code { font-weight: 700; color: #0a0a0a; font-size: 15px; }
+.curr-name { color: #9ca3af; font-size: 14px; margin-left: 4px; white-space: nowrap; }
+.checkmark { color: #0a0a0a; font-size: 16px; font-weight: 600; }
+.roi-fields-wrapper { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 32px 0; }
+.field-wrap { display: flex; flex-direction: column; gap: 12px; }
+.field-label { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; color: #0a0a0a; }
+.tooltip-wrap { position: relative; display: inline-flex; }
+.tooltip-icon { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #9ca3af; color: #9ca3af; font-size: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: 600; user-select: none; flex-shrink: 0; }
+.tooltip-box { display: none; position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-8px); background: #111827; color: #fff; font-size: 13px; font-weight: 400; padding: 8px 14px; border-radius: 10px; white-space: nowrap; z-index: 102; pointer-events: none; }
+.tooltip-box::after { content: ''; position: absolute; top: 100%; left: 14px; border: 6px solid transparent; border-top-color: #111827; }
+.tooltip-wrap:hover .tooltip-box { display: block; }
+.input-wrap { display: flex; align-items: center; border: 1.5px solid #e5e7eb; border-radius: 12px; padding: 0 18px; height: 64px; background: #fff; transition: border-color 0.15s; }
+.input-wrap:hover { border-color: #A4A7AE; }
+.input-wrap.filled { border-color: #717680; }
+.input-wrap.filled:hover { border-color: #717680; }
+.input-wrap:focus-within { border-color: #0053EF !important; }
+.input-wrap.error { border-color: #FF7373 !important; }
+.input-wrap.error:hover { border-color: #FF7373 !important; }
+.input-wrap.filled input, .input-wrap:focus-within input { color: #000000; }
+.input-wrap.filled .input-prefix, .input-wrap:focus-within .input-prefix { color: #000000; }
+.input-error-icon { display: none; flex-shrink: 0; margin-right: 8px; }
+.input-wrap.error .input-error-icon { display: flex; }
+.input-prefix { color: #717680; font-size: 18px; font-weight: 700; margin-right: 4px; transition: color 0.15s; }
+.input-wrap input { flex: 1; border: none; outline: none; font-size: 18px; font-weight: 700; color: #717680; background: transparent; min-width: 0; transition: color 0.15s; }
+.input-wrap input::placeholder { color: #717680; font-weight: 700; }
+.input-suffix { color: #9ca3af; font-size: 14px; font-weight: 500; }
+.field-error { font-size: 13px; color: #FF7373; margin-top: -4px; display: none; }
+.field-error.visible { display: block; }
+.calc-btn { width: 100%; height: 60px; background: #0053EF; color: #fff; border: none; border-radius: 100px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background 0.15s; flex-shrink: 0; }
+.calc-btn:hover { background: #0041cc; }
+.calc-btn:disabled { opacity: 0.9; cursor: not-allowed; }
+.roi-spinner { width: 20px; height: 20px; border: 2.5px solid rgba(255,255,255,0.35); border-top-color: #fff; border-radius: 50%; animation: roi-spin 0.75s linear infinite; flex-shrink: 0; }
+@keyframes roi-spin { to { transform: rotate(360deg); } }
+.roi-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 99999; padding: 40px 20px; overflow-y: auto; }
+.roi-modal { background: #fff; border-radius: 24px; padding: 20px; width: 100%; max-width: 600px; min-width: 0; position: relative; margin: auto; }
+.roi-modal-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: #111; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; }
+.roi-modal-close:hover { background: #333; }
+.roi-modal-top { background: #f3f4f6; border-radius: 16px; padding: 24px; margin-bottom: 24px; margin-top: 8px; }
+.roi-modal-top-label { font-size: 20px; color: #000000; font-weight: 500; margin-bottom: 24px; }
+.roi-amount-section { position: relative; margin-bottom: 24px; min-height: 80px; display: flex; align-items: flex-end; }
+
+/* FIXED: amount uses flex with -0.02em letter-spacing inherited by all children */
+.roi-modal-amount {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  overflow: visible;
+}
+.roi-digit-slot {
+  display: block;
+  overflow: hidden;
+  height: 1.15em;
+  flex-shrink: 0;
+}
+.roi-digit-inner {
+  display: flex;
+  flex-direction: column;
+}
+.roi-digit-num {
+  display: block;
+  height: 1.15em;
+  line-height: 1.15em;
+  text-align: center;
+}
+.roi-static-char {
+  flex-shrink: 0;
+  line-height: 1.15em;
+}
+
+#roiChartBars { position: absolute; bottom: 0; right: 0; display: flex; align-items: flex-end; gap: 5px; height: 80px; }
+.roi-chart-bar { width: 11px; height: 0; background: #57E5B2; border-radius: 3px 3px 0 0; }
+.roi-modal-divider { height: 1px; background: #e5e7eb; }
+.roi-breakdown-rows { display: flex; flex-direction: column; gap: 20px; padding-top: 20px; }
+.roi-breakdown-row { display: flex; align-items: center; justify-content: space-between; font-size: 15px; }
+.roi-row-left { display: flex; align-items: center; gap: 6px; color: #374151; font-weight: 400; }
+.roi-row-badge { color: #717680; font-size: 12px; display: flex; align-items: center; gap: 3px; }
+.roi-row-amount { font-weight: 500; color: #0a0a0a; }
+.roi-info-box { background: #f0fdf4; border-radius: 14px; padding: 24px; margin-bottom: 48px; }
+.roi-info-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: #000000; line-height: 1.6; }
+.roi-info-item + .roi-info-item { margin-top: 20px; }
+.roi-check-icon { flex-shrink: 0; margin-top: 2px; display: block; }
+.roi-modal-sub { text-align: left; color: #000000; font-size: 16px; margin-bottom: 24px; padding-left: 8px; }
+.flag-icon { width: 24px; height: 24px; display: inline-flex; align-items: center; flex-shrink: 0; }
+@media (max-width: 767px) {
+  .roi-modal-top { padding: 20px; }
+  .roi-info-box { display: none; }
+  #roiChartBars { display: none !important; }
+  .roi-modal-amount { font-size: 40px; font-weight: 600; }
+}
+</style>
+
+<div class="roi-card" id="roiCard">
+  <div class="roi-header">
+    <span class="heading-style-h5">ROI Calculator</span>
+    <div style="position:relative;">
+      <button class="currency-btn" id="roiCurrBtn" onclick="window._roiToggleDropdown(event)">
+        <span class="flag-icon" id="roiCurrIcon"></span>
+        <span id="roiCurrCode">USD</span>
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none" id="roiChevron" style="transition:transform 0.2s;flex-shrink:0;pointer-events:none;">
+          <path d="M3 4.5L6 7.5L9 4.5" stroke="#0a0a0a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <div class="currency-dropdown" id="roiCurrDropdown" style="display:none;">
+        <div class="currency-option" onclick="window._roiSelectCurrency('USD')">
+          <div class="curr-left"><span class="flag-icon" id="flag-opt-USD"></span><span class="curr-code">USD</span><span class="curr-name">US dollar</span></div>
+          <span class="checkmark" id="roi-check-USD">✓</span>
+        </div>
+        <div class="currency-option" onclick="window._roiSelectCurrency('GBP')">
+          <div class="curr-left"><span class="flag-icon" id="flag-opt-GBP"></span><span class="curr-code">GBP</span><span class="curr-name">British pound</span></div>
+          <span class="checkmark" id="roi-check-GBP" style="visibility:hidden;">✓</span>
+        </div>
+        <div class="currency-option" onclick="window._roiSelectCurrency('EUR')">
+          <div class="curr-left"><span class="flag-icon" id="flag-opt-EUR"></span><span class="curr-code">EUR</span><span class="curr-name">Euro</span></div>
+          <span class="checkmark" id="roi-check-EUR" style="visibility:hidden;">✓</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="roi-fields-wrapper">
+    <div class="field-wrap">
+      <div class="field-label">What is your annual turnover?
+        <div class="tooltip-wrap"><div class="tooltip-icon">?</div><div class="tooltip-box">Total gross revenue per annum</div></div>
+      </div>
+      <div class="input-wrap" id="roiTurnoverWrap">
+        <span class="input-prefix" id="roiSym1">$</span>
+        <input type="text" id="roiTurnover" placeholder="10,000,000" onfocus="this.placeholder=''; window._roiClearError('roiTurnover')" onblur="if(!this.value) this.placeholder='10,000,000'; window._roiFormatField(this)" oninput="window._roiOnInput(this)">
+        <svg class="input-error-icon" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M7.16667 4.5V7.16667M7.16667 9.83333H7.17333M13.8333 7.16667C13.8333 10.8486 10.8486 13.8333 7.16667 13.8333C3.48477 13.8333 0.5 10.8486 0.5 7.16667C0.5 3.48477 3.48477 0.5 7.16667 0.5C10.8486 0.5 13.8333 3.48477 13.8333 7.16667Z" stroke="#FF7373" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span class="input-suffix" id="roiSuf1">USD</span>
+      </div>
+      <span class="field-error" id="roiTurnoverError">Please enter your annual turnover</span>
+    </div>
+    <div class="field-wrap">
+      <div class="field-label">What is your Avg Order Value (AOV)?
+        <div class="tooltip-wrap"><div class="tooltip-icon">?</div><div class="tooltip-box">Average transaction / basket / order value</div></div>
+      </div>
+      <div class="input-wrap" id="roiAovWrap">
+        <span class="input-prefix" id="roiSym2">$</span>
+        <input type="text" id="roiAov" placeholder="5,000" onfocus="this.placeholder=''; window._roiClearError('roiAov')" onblur="if(!this.value) this.placeholder='5,000'; window._roiFormatField(this)" oninput="window._roiOnInput(this)">
+        <svg class="input-error-icon" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M7.16667 4.5V7.16667M7.16667 9.83333H7.17333M13.8333 7.16667C13.8333 10.8486 10.8486 13.8333 7.16667 13.8333C3.48477 13.8333 0.5 10.8486 0.5 7.16667C0.5 3.48477 3.48477 0.5 7.16667 0.5C10.8486 0.5 13.8333 3.48477 13.8333 7.16667Z" stroke="#FF7373" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span class="input-suffix" id="roiSuf2">USD</span>
+      </div>
+      <span class="field-error" id="roiAovError">Please enter your average order value</span>
+    </div>
+  </div>
+  <button class="calc-btn" id="roiCalcBtn" onclick="window._roiCalculate()">Calculate Your Revenue Uplift</button>
+</div>
+
+<script>
+window._roiState = { currSym: '$', currCd: 'USD' };
+window._roiFlags = {
+  USD: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#uf1)"><g clip-path="url(#uf2)"><mask id="ufm" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><path d="M24 0H0V24H24V0Z" fill="white"/></mask><g mask="url(#ufm)"><path d="M9.40868 0.283725L9.62498 0.500025L8.87498 1.25003L8.23196 0.60705C7.06624 0.992437 5.98031 1.55123 5.00351 2.2536L5.24996 2.50001L4.49996 3.25001L4.16501 2.91506C3.79515 3.23434 3.4428 3.57334 3.11441 3.93491L3.67946 4.5L2.92946 5.25L2.43491 4.75537C2.15505 5.12423 1.89709 5.51021 1.66069 5.91071L2.25 6.49999L1.5 7.24999L1.14105 6.89104C0.410325 8.44136 0 10.1725 0 12H12V0C11.1099 0 10.2435 0.0998625 9.40868 0.283725Z" fill="#191977"/><path d="M18.6323 1.99999C16.7321 0.73725 14.4525 0 12 0V1.99999H18.6323Z" fill="white"/><path d="M12 4H20.942C20.2612 3.2396 19.4852 2.56685 18.6323 2H12V4Z" fill="#F0263C"/><path d="M12 5.99999H22.3906C21.9759 5.2834 21.4908 4.61298 20.942 4H12L12 5.99999Z" fill="white"/><path d="M12 7.99999H23.3145C23.0673 7.30106 22.7568 6.63266 22.3906 6H12V7.99999Z" fill="#F0263C"/><path d="M12 9.99999H23.8309C23.7154 9.31167 23.5419 8.64324 23.3145 8H12L12 9.99999Z" fill="white"/><path d="M12 12H24C24 11.3182 23.9402 10.6507 23.8309 10H12V12Z" fill="#F0263C"/><path d="M12 12H0C0 12.6818 0.0598125 13.3493 0.16905 14H23.8309C23.9401 13.3493 24 12.6817 24 12H12Z" fill="white"/><path d="M0.688364 16H23.3173C23.5447 15.3567 23.7182 14.6883 23.8337 14H0.171875C0.287412 14.6883 0.460964 15.3567 0.688364 16Z" fill="#F0263C"/><path d="M1.61135 18H22.3926C22.7588 17.3673 23.0693 16.6989 23.3165 16H0.6875C0.934625 16.6989 1.2452 17.3673 1.61135 18Z" fill="white"/><path d="M3.058 20H20.9419C21.4907 19.387 21.9759 18.7166 22.3906 18H1.60938C2.02409 18.7166 2.50919 19.387 3.058 20Z" fill="#F0263C"/><path d="M5.36444 22H18.6289C19.4819 21.4331 20.2579 20.7604 20.9386 20H3.05469C3.73542 20.7604 4.51146 21.4331 5.36444 22Z" fill="white"/><path d="M11.9994 24C14.4519 24 16.7315 23.2628 18.6317 22H5.36719C7.26735 23.2628 9.54694 24 11.9994 24Z" fill="#F0263C"/><path d="M2.92969 7.75L2.17969 8.5L2.92969 9.25L3.67969 8.5L2.92969 7.75Z" fill="white"/><path d="M5.875 7.75L5.125 8.5L5.875 9.25L6.625 8.5L5.875 7.75Z" fill="white"/><path d="M8.875 7.75L8.125 8.5L8.875 9.25L9.625 8.5L8.875 7.75Z" fill="white"/><path d="M5.875 3.75L5.125 4.5L5.875 5.25L6.625 4.5L5.875 3.75Z" fill="white"/><path d="M8.875 3.75L8.125 4.5L8.875 5.25L9.625 4.5L8.875 3.75Z" fill="white"/><path d="M1.5 9.75L0.75 10.5L1.5 11.25L2.25 10.5L1.5 9.75Z" fill="white"/><path d="M4.5 9.75L3.75 10.5L4.5 11.25L5.25 10.5L4.5 9.75Z" fill="white"/><path d="M7.44531 9.75L6.69531 10.5L7.44531 11.25L8.19531 10.5L7.44531 9.75Z" fill="white"/><path d="M10.4453 9.75L9.69531 10.5L10.4453 11.25L11.1953 10.5L10.4453 9.75Z" fill="white"/><path d="M4.5 5.75L3.75 6.5L4.5 7.25L5.25 6.5L4.5 5.75Z" fill="white"/><path d="M7.44531 5.75L6.69531 6.5L7.44531 7.25L8.19531 6.5L7.44531 5.75Z" fill="white"/><path d="M10.4453 5.75L9.69531 6.5L10.4453 7.25L11.1953 6.5L10.4453 5.75Z" fill="white"/><path d="M7.44531 1.75L6.69531 2.5L7.44531 3.25L8.19531 2.5L7.44531 1.75Z" fill="white"/><path d="M10.4453 1.75L9.69531 2.5L10.4453 3.25L11.1953 2.5L10.4453 1.75Z" fill="white"/></g></g></g><defs><clipPath id="uf1"><rect width="24" height="24" fill="white"/></clipPath><clipPath id="uf2"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>',
+  GBP: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#gf1)"><path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F0F0F0"/><path d="M2.47739 4.6875C1.53478 5.91389 0.824015 7.32741 0.410156 8.86298H6.65287L2.47739 4.6875Z" fill="#0052B4"/><path d="M23.5864 8.86294C23.1725 7.32741 22.4617 5.91389 21.5191 4.6875L17.3438 8.86294H23.5864Z" fill="#0052B4"/><path d="M0.410156 15.1289C0.824063 16.6644 1.53483 18.078 2.47739 19.3043L6.65274 15.1289H0.410156Z" fill="#0052B4"/><path d="M19.3043 2.47744C18.078 1.53483 16.6645 0.824063 15.1289 0.410156V6.65283L19.3043 2.47744Z" fill="#0052B4"/><path d="M4.6875 21.5191C5.91389 22.4617 7.32741 23.1725 8.86294 23.5864V17.3438L4.6875 21.5191Z" fill="#0052B4"/><path d="M8.86289 0.410156C7.32736 0.824062 5.91384 1.53483 4.6875 2.47739L8.86289 6.65278V0.410156Z" fill="#0052B4"/><path d="M15.1289 23.5864C16.6644 23.1725 18.078 22.4617 19.3043 21.5191L15.1289 17.3438V23.5864Z" fill="#0052B4"/><path d="M17.3438 15.1289L21.5191 19.3043C22.4617 18.078 23.1725 16.6644 23.5864 15.1289H17.3438Z" fill="#0052B4"/><path d="M23.8984 10.4348H13.5653V0.101578C13.0529 0.034875 12.5305 0 12 0C11.4694 0 10.9471 0.034875 10.4348 0.101578V10.4347H0.101578C0.034875 10.9471 0 11.4695 0 12C0 12.5306 0.034875 13.0529 0.101578 13.5652H10.4347V23.8984C10.9471 23.9651 11.4694 24 12 24C12.5305 24 13.0529 23.9652 13.5652 23.8984V13.5653H23.8984C23.9651 13.0529 24 12.5306 24 12C24 11.4695 23.9651 10.9471 23.8984 10.4348Z" fill="#D80027"/><path d="M15.1289 15.129L20.4837 20.4838C20.73 20.2376 20.9649 19.9802 21.1891 19.7134L16.6046 15.1289H15.1289V15.129Z" fill="#D80027"/><path d="M8.87048 15.1289L3.51562 20.4837C3.76181 20.73 4.0192 20.9649 4.28602 21.189L8.87048 16.6045V15.1289Z" fill="#D80027"/><path d="M8.87269 8.87058V8.87048L3.51788 3.51562C3.27159 3.76181 3.03666 4.0192 2.8125 4.28602L7.39702 8.87053H8.87269V8.87058Z" fill="#D80027"/><path d="M15.1289 8.87274L20.4838 3.51783C20.2376 3.27155 19.9802 3.03661 19.7134 2.8125L15.1289 7.39702V8.87274Z" fill="#D80027"/></g><defs><clipPath id="gf1"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>',
+  EUR: '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#003399"/><g transform="translate(12,12)"><path id="rStar" d="M0,-3.5 L0.8,-1.1 L3.3,-1.1 L1.4,0.4 L2.1,2.8 L0,1.4 L-2.1,2.8 L-1.4,0.4 L-3.3,-1.1 L-0.8,-1.1 Z" fill="#FFCC00" transform="rotate(0) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(30) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(60) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(90) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(120) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(150) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(180) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(210) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(240) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(270) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(300) translate(0,-5.5) scale(0.55)"/><use href="#rStar" transform="rotate(330) translate(0,-5.5) scale(0.55)"/></g></svg>'
+};
+window._roiCurrData = { USD: { sym: '$' }, GBP: { sym: '£' }, EUR: { sym: '€' } };
+window._roiTrendSVG = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 3.5L7.06568 7.43432C6.86768 7.63232 6.76867 7.73133 6.65451 7.76842C6.55409 7.80105 6.44591 7.80105 6.34549 7.76842C6.23133 7.73133 6.13232 7.63232 5.93431 7.43431L4.56568 6.06568C4.36768 5.86768 4.26867 5.76867 4.15451 5.73158C4.05409 5.69895 3.94591 5.69895 3.84549 5.73158C3.73133 5.76867 3.63232 5.86768 3.43431 6.06569L1 8.5M11 3.5H7.5M11 3.5V7" stroke="#0053EF" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+window._roiCheckSVG = '<svg class="roi-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 13.4912L4.635 10.625L3.75 11.51L7.49875 15.2587L16.875 5.885L15.99 5L7.5 13.4912Z" fill="#00BC70"/></svg>';
+
+/* FIXED: Clean animate function using CSS classes, flex layout, no inline letter-spacing */
+window._roiAnimateNumber = function(el, finalText) {
+  var match = finalText.match(/[\d,]+/);
+  if (!match) { el.textContent = finalText; return; }
+  var prefix = finalText.substring(0, finalText.indexOf(match[0]));
+  var numStr = match[0];
+  var digits = numStr.split('');
+  el.innerHTML = '';
+  var slots = [];
+  if (prefix) {
+    var p = document.createElement('span');
+    p.className = 'roi-static-char';
+    p.textContent = prefix;
+    el.appendChild(p);
+  }
+  digits.forEach(function(char) {
+    if (char === ',') {
+      var comma = document.createElement('span');
+      comma.className = 'roi-static-char';
+      comma.textContent = ',';
+      el.appendChild(comma);
+      return;
+    }
+    var d = parseInt(char);
+    var slot = document.createElement('span');
+    slot.className = 'roi-digit-slot';
+    var inner = document.createElement('span');
+    inner.className = 'roi-digit-inner';
+    for (var n = 0; n <= d; n++) {
+      var numEl = document.createElement('span');
+      numEl.className = 'roi-digit-num';
+      numEl.textContent = n;
+      inner.appendChild(numEl);
+    }
+    slot.appendChild(inner);
+    el.appendChild(slot);
+    slots.push(inner);
+  });
+  slots.forEach(function(inner, i) {
+    var delay = 100 + i * 80;
+    var duration = 1200 + i * 80;
+    setTimeout(function() {
+      inner.style.transition = 'transform ' + duration + 'ms cubic-bezier(0.25, 1, 0.5, 1)';
+      inner.style.transform = 'translateY(calc(-100% + 1.15em))';
+    }, delay);
+  });
+};
+
+window._roiAnimateChart = function(container) {
+  var barHeights = [13, 19, 28, 40, 53, 66, 78];
+  container.innerHTML = '';
+  barHeights.forEach(function(h, i) {
+    var bar = document.createElement('div');
+    bar.className = 'roi-chart-bar';
+    bar.style.height = '0px';
+    container.appendChild(bar);
+    setTimeout(function() {
+      bar.style.transition = 'height ' + (500 + i * 80) + 'ms cubic-bezier(0.34, 1.56, 0.64, 1)';
+      bar.style.height = h + 'px';
+    }, 50 + i * 60);
+  });
+};
+window._roiToggleDropdown = function(e) {
+  if (e) e.stopPropagation();
+  var d = document.getElementById('roiCurrDropdown');
+  var chevron = document.getElementById('roiChevron');
+  var isOpen = d.style.display === 'flex';
+  d.style.display = isOpen ? 'none' : 'flex';
+  chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+};
+window._roiSelectCurrency = function(code) {
+  window._roiState.currSym = window._roiCurrData[code].sym;
+  window._roiState.currCd = code;
+  document.getElementById('roiCurrIcon').innerHTML = window._roiFlags[code];
+  document.getElementById('roiCurrCode').textContent = code;
+  document.getElementById('roiSym1').textContent = window._roiCurrData[code].sym;
+  document.getElementById('roiSym2').textContent = window._roiCurrData[code].sym;
+  document.getElementById('roiSuf1').textContent = code;
+  document.getElementById('roiSuf2').textContent = code;
+  ['USD','GBP','EUR'].forEach(function(c) {
+    document.getElementById('roi-check-' + c).style.visibility = c === code ? 'visible' : 'hidden';
+  });
+  document.getElementById('roiCurrDropdown').style.display = 'none';
+  document.getElementById('roiChevron').style.transform = '';
+};
+window._roiClearError = function(id) {
+  var wrap = document.getElementById(id + 'Wrap');
+  var err = document.getElementById(id + 'Error');
+  if (wrap) wrap.classList.remove('error');
+  if (err) err.classList.remove('visible');
+};
+window._roiOnInput = function(input) {
+  var raw = input.value.replace(/[^0-9]/g, '');
+  input.value = raw ? parseInt(raw).toLocaleString('en-US') : '';
+  window._roiClearError(input.id);
+  var wrap = document.getElementById(input.id + 'Wrap');
+  if (wrap) { if (raw) { wrap.classList.add('filled'); } else { wrap.classList.remove('filled'); } }
+};
+window._roiFormatField = function(input) {
+  var raw = input.value.replace(/[^0-9]/g, '');
+  if (!raw) { input.value = ''; var wrap = document.getElementById(input.id + 'Wrap'); if (wrap) wrap.classList.remove('filled'); }
+};
+window._roiCalculate = function() {
+  var turnoverRaw = document.getElementById('roiTurnover').value.replace(/[^0-9]/g, '');
+  var aovRaw = document.getElementById('roiAov').value.replace(/[^0-9]/g, '');
+  var hasError = false;
+  if (!turnoverRaw) { document.getElementById('roiTurnoverWrap').classList.add('error'); document.getElementById('roiTurnoverError').classList.add('visible'); hasError = true; }
+  if (!aovRaw) { document.getElementById('roiAovWrap').classList.add('error'); document.getElementById('roiAovError').classList.add('visible'); hasError = true; }
+  if (hasError) return;
+  var btn = document.getElementById('roiCalcBtn');
+  btn.innerHTML = 'Calculating <div class="roi-spinner"></div>';
+  btn.disabled = true;
+  setTimeout(function() { btn.innerHTML = 'Calculate Your Revenue Uplift'; btn.disabled = false; window._roiShowResults(); }, 1600);
+};
+window._roiGetOrCreateOverlay = function() {
+  var existing = document.getElementById('roiModalOverlay');
+  if (existing) { document.body.appendChild(existing); return existing; }
+  var overlay = document.createElement('div');
+  overlay.id = 'roiModalOverlay';
+  overlay.className = 'roi-modal-overlay';
+  overlay.style.display = 'none';
+  overlay.innerHTML = '<div class="roi-modal" onclick="event.stopPropagation()">' +
+    '<button class="roi-modal-close" onclick="window._roiCloseModal()"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 1L11 11M11 1L1 11" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></button>' +
+    '<div class="roi-modal-top">' +
+    '<div class="roi-modal-top-label">Total Revenue Uplift</div>' +
+    '<div class="roi-amount-section"><div class="roi-modal-amount" id="roiModalAmount"></div><div id="roiChartBars"></div></div>' +
+    '<div class="roi-modal-divider"></div>' +
+    '<div class="roi-breakdown-rows" id="roiBreakdown"></div></div>' +
+    '<div class="roi-info-box">' +
+    '<div class="roi-info-item">' + window._roiCheckSVG + '<span id="roiInfoLine1"></span></div>' +
+    '<div class="roi-info-item">' + window._roiCheckSVG + '<span>Unlocked through our smart orchestration capabilities, including Partial Approval, Smart Routing, Cascading, and more.</span></div>' +
+    '<div class="roi-info-item">' + window._roiCheckSVG + '<span>Based on the inputted AOV, there may be additional revenue opportunities yet to be captured.</span></div></div>' +
+    '<p class="roi-modal-sub">Book a demo to find out how much you could be leaving on the table.</p>' +
+    '<a aria-label="staggering button" href="/book-a-demo" class="btn-animate-chars base---100 w-inline-block"><div class="btn-animate-chars__bg base---101"></div><span data-button-animate-chars="" class="btn-animate-chars__text base---102"><span style="transition-delay:0s">B</span><span style="transition-delay:0.01s">o</span><span style="transition-delay:0.02s">o</span><span style="transition-delay:0.03s">k</span><span style="transition-delay:0.04s;white-space:pre"> </span><span style="transition-delay:0.05s">a</span><span style="transition-delay:0.06s;white-space:pre"> </span><span style="transition-delay:0.07s">D</span><span style="transition-delay:0.08s">e</span><span style="transition-delay:0.09s">m</span><span style="transition-delay:0.1s">o</span></span></a></div>';
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) window._roiCloseModal(); });
+  document.body.appendChild(overlay);
+  return overlay;
+};
+window._roiShowResults = function() {
+  var turnover = parseInt(document.getElementById('roiTurnover').value.replace(/[^0-9]/g, '')) || 0;
+  var partial = Math.round(turnover * 0.01);
+  var smart = Math.round(turnover * 0.03);
+  var cascade = Math.round(turnover * 0.01);
+  var total = partial + smart + cascade;
+  var sym = window._roiState.currSym;
+  function fmt(n) { return sym + ' ' + Math.round(n).toLocaleString('en-US'); }
+  var overlay = window._roiGetOrCreateOverlay();
+  document.getElementById('roiInfoLine1').textContent = 'Your estimated revenue uplift with Pay.com could be approximately ' + fmt(total);
+  var rows = [
+    { label: 'Partial Approval', pct: '1%', val: partial },
+    { label: 'Smart Routing', pct: '3%', val: smart },
+    { label: 'Cascading', pct: '1%', val: cascade }
+  ];
+  var bHtml = '';
+  rows.forEach(function(r) {
+    bHtml += '<div class="roi-breakdown-row"><div class="roi-row-left">' + r.label + ' <span class="roi-row-badge">' + window._roiTrendSVG + ' ' + r.pct + '</span></div><div class="roi-row-amount">' + fmt(r.val) + '</div></div>';
+  });
+  document.getElementById('roiBreakdown').innerHTML = bHtml;
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  setTimeout(function() {
+    window._roiAnimateNumber(document.getElementById('roiModalAmount'), fmt(total));
+    window._roiAnimateChart(document.getElementById('roiChartBars'));
+  }, 50);
+};
+window._roiCloseModal = function() {
+  var overlay = document.getElementById('roiModalOverlay');
+  if (overlay) overlay.style.display = 'none';
+  document.body.style.overflow = '';
+};
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') window._roiCloseModal(); });
+document.addEventListener('click', function(e) {
+  var btn = document.getElementById('roiCurrBtn'), dd = document.getElementById('roiCurrDropdown'), chevron = document.getElementById('roiChevron');
+  if (!btn || !dd) return;
+  if (!btn.contains(e.target) && !dd.contains(e.target)) { dd.style.display = 'none'; if (chevron) chevron.style.transform = ''; }
+});
+(function() {
+  Object.keys(window._roiFlags).forEach(function(code) { var el = document.getElementById('flag-opt-' + code); if (el) el.innerHTML = window._roiFlags[code]; });
+  var icon = document.getElementById('roiCurrIcon'); if (icon) icon.innerHTML = window._roiFlags['USD'];
+  window._roiGetOrCreateOverlay();
+})();
+</script></div></div></div><div class="bg-background-wrapper"><img src="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e75d3edb774650f95ad88c_bg%20img.webp" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e75d3edb774650f95ad88c_bg%20img-p-500.webp 500w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e75d3edb774650f95ad88c_bg%20img-p-800.webp 800w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e75d3edb774650f95ad88c_bg%20img-p-1080.webp 1080w, https://cdn.prod.website-files.com/69d4c843fed879b1761cec61/69e75d3edb774650f95ad88c_bg%20img.webp 1440w" alt="" class="bg-image roi"></div></section>
