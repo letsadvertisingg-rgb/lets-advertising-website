@@ -10,37 +10,44 @@ import type { PlatformSlide } from "@/types";
 
 const SLIDES: PlatformSlide[] = [
   {
-    tag: "For CFOs",
-    title: "Reconcile settlements across all providers",
-    body: "Automate settlement reconciliation and decode hidden fees across multiple providers in seconds, not hours",
+    tag: "Web Design",
+    title: "Website Design & Development",
+    body: "Your website is your digital storefront. We create professional, mobile-friendly websites that build trust, showcase your services, and generate inquiries. Result: more visitors become customers.",
     image: "/images/1.webp",
   },
   {
-    tag: "For Head of Payments",
-    title: "Maximize your global authorization rates",
-    body: "Take strategic control of your global payment infrastructure. Use intelligent routing to rescue declines, boost approvals, and protect your bottom line.",
+    tag: "SEO",
+    title: "Search Engine Optimization",
+    body: "When people search for your services on Google, you should be easy to find. We improve your rankings, grow organic traffic, and build long-term visibility. Result: more qualified visitors without paying for every click.",
     image: "/images/2.webp",
   },
   {
-    tag: "For Engineering Teams",
-    title: "Integrate in minutes with headless APIs",
-    body: "Accelerate integration timelines with our API-first architecture. Access clear documentation, robust SDKs, and headless infrastructure backed by guaranteed 99.999% uptime SLAs.",
+    tag: "Social Media",
+    title: "Social Media Marketing",
+    body: "Your customers spend hours every day on social media. We build your presence, engage your audience, and generate leads through social platforms. Result: more brand awareness and customer engagement.",
     image: "/images/3.webp",
   },
   {
-    tag: "For Operations Teams",
-    title: "Gain total operational visibility",
-    body: "Consolidate your fragmented payment stack into a single dashboard. Automate your back-office tasks, save time, and track your global cash flow.",
+    tag: "Paid Ads",
+    title: "Google & Paid Advertising",
+    body: "Want faster results? Google Ads, YouTube, display, remarketing, and social ads — with your budget carefully managed to maximize returns. Result: more leads and sales from targeted advertising.",
     image: "/images/4.webp",
+  },
+  {
+    tag: "Content",
+    title: "Content Marketing",
+    body: "People buy from businesses they trust. We create valuable content that educates your audience, builds credibility, and improves SEO. Result: stronger customer relationships and increased conversions.",
+    image: "/images/01.webp",
+  },
+  {
+    tag: "Analytics",
+    title: "Analytics & Performance Tracking",
+    body: "Every marketing decision should be backed by data. Monthly reports, website analytics, lead tracking, and campaign insights. Result: complete transparency and smarter business decisions.",
+    image: "/images/02.webp",
   },
 ];
 
-const SLIDE_ALTS = [
-  "Payment platforms Stripe, Worldpay, Paysafe, and Pay.com linked to reconciliation overview with matched and unmatched status.",
-  "Flowchart shows 3DS available, Country Card US, Amount over $100, leading to Best route found.",
-  "System status shows all systems operational and uptime SLA at 99.999%.",
-  "Dashboard with financial summary showing $4.418M and a 91.5% completion gauge.",
-];
+const SLIDE_ALTS = ["", "", "", "", "", ""];
 
 export function PlatformCarousel() {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -159,11 +166,14 @@ export function PlatformCarousel() {
   }, []);
 
   return (
-    <section className="flex flex-col items-center overflow-hidden bg-[var(--neutral--neutral-grey-200)] pt-[var(--size--8xl)] pb-[var(--size--8xl)] max-[991px]:pt-[var(--size--6xl)] max-[991px]:pb-[var(--size--6xl)] max-[767px]:pt-[var(--size--5xl)] max-[767px]:pb-[var(--size--5xl)]">
+    <section
+      id="services"
+      className="flex flex-col items-center overflow-hidden bg-[var(--neutral--neutral-grey-200)] pt-[var(--size--8xl)] pb-[var(--size--8xl)] max-[991px]:pt-[var(--size--6xl)] max-[991px]:pb-[var(--size--6xl)] max-[767px]:pt-[var(--size--5xl)] max-[767px]:pb-[var(--size--5xl)]"
+    >
       <div className="w-full max-w-[var(--container--main-size)] px-[var(--container--size-padding)] mx-auto">
         <div className="relative flex flex-col gap-[var(--size--4xl)]">
           <h2 className="max-w-[20ch] font-semibold text-[length:var(--typography--h2)] max-[991px]:text-[length:var(--typography--h2-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
-            One platform. Built for growth and scalability.
+            Our services. Everything you need to grow.
           </h2>
 
           <div ref={componentRef} className="slider-component relative overflow-visible">

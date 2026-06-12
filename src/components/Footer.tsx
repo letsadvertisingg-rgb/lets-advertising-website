@@ -1,59 +1,41 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
+import { Wordmark } from "@/components/Wordmark";
 import type { FooterColumn } from "@/types";
 
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
-    heading: "Products",
+    heading: "Services",
     links: [
-      { label: "Payments", href: "/payments" },
-      { label: "Optimisation", href: "/optimisation" },
-      { label: "Protection", href: "/protection" },
-      { label: "Treasury", href: "/treasury" },
+      { label: "Website Design & Development", href: "#services" },
+      { label: "SEO", href: "#services" },
+      { label: "Social Media Marketing", href: "#services" },
+      { label: "Google & Paid Advertising", href: "#services" },
+      { label: "Content Marketing", href: "#services" },
+      { label: "Analytics & Tracking", href: "#services" },
     ],
   },
   {
-    heading: "COMPANY",
+    heading: "Industries",
     links: [
-      { label: "About Us", href: "/about-us" },
-      { label: "Careers", href: "/careers" },
-      { label: "Brand assets", href: "/brand-assets" },
+      { label: "Retail & E-commerce", href: "#industries" },
+      { label: "Real Estate", href: "#industries" },
+      { label: "Healthcare", href: "#industries" },
+      { label: "Local Businesses", href: "#industries" },
+      { label: "Startups", href: "#industries" },
     ],
   },
   {
-    heading: "DEVELOPERS",
+    heading: "Company",
     links: [
-      { label: "Documentation", href: "https://apiref.pay.com/" },
-      { label: "API Reference", href: "https://apiref.pay.com/" },
-      { label: "Connections", href: "/connections" },
-    ],
-  },
-  {
-    heading: "resources",
-    links: [
-      { label: "Blog, Newsroom & Case studies", href: "/blog" },
-      { label: "FAQ", href: "/faq" },
-    ],
-  },
-  {
-    heading: "pricing",
-    links: [{ label: "Pricing", href: "/pricing-us" }],
-  },
-  {
-    heading: "legal",
-    links: [
-      { label: "Privacy Policy", href: "/legal/privacy-policy" },
-      { label: "Terms & Conditions", href: "/legal/terms-and-conditions" },
-      { label: "Cookie Policy", href: "/legal/cookie-policy" },
-      { label: "Report a Complaint", href: "/legal/report-a-complaint" },
+      { label: "Why Choose Us", href: "#why-us" },
+      { label: "Our Process", href: "#process" },
+      { label: "Contact", href: "#contact" },
     ],
   },
 ];
-
-const REGULATORY_TEXT = `Pay.com Group Entities ("Pay.com Group") operate under the brand name "Pay.com" with headquarters in Limassol, Cyprus. The Pay.com Group includes: PAYCOMCY LIMITED (HE 408974), a Cyprus Payment Institution regulated by the Central Bank of Cyprus (licence no. 115.1.2.42) providing payment services, including the issuing of payment instruments and the acquiring of payment transactions. PAY TECHNOLOGIES (CY) LIMITED (HE 437492), a Cyprus private limited company acting as the technology and payment gateway provider to the Group. PAY.COM US, INC. (Delaware file no. 6425328), a corporation registered in the State of Delaware, USA, acting as a registered Independent Sales Organization (ISO) under the sponsorship of a US Bank to provide merchant payment processing services across the United States.`;
 
 function FooterLinkColumn({ column }: { column: FooterColumn }) {
   return (
@@ -79,26 +61,24 @@ function FooterLinkColumn({ column }: { column: FooterColumn }) {
 }
 
 export function Footer() {
-  const [regulatoryOpen, setRegulatoryOpen] = useState(false);
   const year = new Date().getFullYear();
 
   return (
     <footer className="footer-section relative flex flex-col items-center bg-black text-white pt-[var(--size--8xl)] pb-[4rem]">
       <div className="w-full max-w-[var(--container--main-size)] px-[var(--container--size-padding)] mx-auto grid grid-cols-1 min-[992px]:grid-cols-2 gap-[3rem]">
-        {/* Left: brand + tagline + CTA + linkedin */}
+        {/* Left: brand + tagline + CTA */}
         <div className="flex flex-col justify-between gap-[var(--size--3xl)]">
           <div className="flex flex-col items-start gap-[var(--size--3xl)]">
             <div className="flex flex-col gap-[var(--size--2xl)]">
-              <Link href="/" className="footer-logo-wrapper flex justify-start min-w-[9.375rem] h-[1.875rem]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/logo-69d50a.svg" alt="Pay.com" className="w-full h-full" />
+              <Link href="/" className="no-underline">
+                <Wordmark className="text-white text-[1.5rem]" />
               </Link>
               <div className="text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)] text-white">
-                Built to approve. Designed to convert.
+                Let&rsquo;s build your brand. Let&rsquo;s grow together.
               </div>
             </div>
             <Link
-              href="/book-a-demo"
+              href="#contact"
               aria-label="Get in Touch"
               className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer px-[2rem] py-[1rem] no-underline"
             >
@@ -108,20 +88,6 @@ export function Footer() {
               </span>
             </Link>
           </div>
-          <div className="flex flex-col gap-[var(--size--2xl)] max-[991px]:hidden">
-            <div className="linkedin-wrapper flex items-center gap-[0.75rem]">
-              <div className="text-[length:var(--typography--text-m)] text-white">Follow us on:</div>
-              <a
-                href="https://uk.linkedin.com/company/pay-com-official"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-link"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/layer1.svg" alt="LinkedIn" className="linkedin-image" />
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Right: link columns */}
@@ -130,58 +96,19 @@ export function Footer() {
             <FooterLinkColumn key={col.heading} column={col} />
           ))}
         </div>
-
-        {/* Mobile linkedin row */}
-        <div className="hidden max-[991px]:flex flex-col gap-[var(--size--2xl)]">
-          <div className="linkedin-wrapper flex items-center gap-[0.75rem]">
-            <div className="text-[length:var(--typography--text-m)] text-white">Follow us on:</div>
-            <a
-              href="https://uk.linkedin.com/company/pay-com-official"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/layer1.svg" alt="LinkedIn" className="linkedin-image" />
-            </a>
-          </div>
-        </div>
       </div>
 
-      {/* Copyright + regulatory */}
+      {/* Copyright */}
       <div className="w-full max-w-[var(--container--main-size)] px-[var(--container--size-padding)] mx-auto mt-[var(--size--8xl)]">
         <div className="text-[length:var(--typography--text-s)] leading-[var(--typography--line-height-l)]">
-          Copyright © {year} Pay.com - All rights reserved. Click here to access our{" "}
-          <strong
-            className="text-regulatory underline decoration-1 underline-offset-4 cursor-pointer"
-            onClick={() => setRegulatoryOpen((o) => !o)}
-          >
-            Regulatory Information.
-          </strong>
-        </div>
-        <div
-          className="regulatory-wrapper overflow-hidden grid transition-[grid-template-rows] duration-300"
-          style={{ gridTemplateRows: regulatoryOpen ? "1fr" : "0fr" }}
-        >
-          <div className="min-h-0">
-            <div className="regulatory-inner-wrapper pt-[1.5rem]">
-              <p className="text-[length:var(--typography--text-s)] leading-[var(--typography--line-height-l)] text-white">
-                {REGULATORY_TEXT}
-              </p>
-            </div>
-          </div>
+          Copyright © {year} Let&rsquo;s Advertising — All rights reserved.
         </div>
       </div>
 
       {/* Bottom zig-zag visual strip */}
       <div className="visual-bottom absolute bottom-0 left-0 right-0 flex items-end max-h-[1rem]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/visual.webp"
-          alt="Colorful boat sails on calm blue ocean water under a clear sky."
-          sizes="100vw"
-          className="w-full h-full custom"
-        />
+        <img src="/images/visual.webp" alt="" sizes="100vw" className="w-full h-full custom" />
       </div>
     </footer>
   );

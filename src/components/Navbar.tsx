@@ -3,94 +3,111 @@
 import { useState } from "react";
 import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
+import { Wordmark } from "@/components/Wordmark";
 import { ChevronDownIcon } from "@/components/icons";
 
 interface DdCard {
   label: string;
   description: string;
   href: string;
-  image?: string;
-  imageAlt?: string;
 }
 
-const PRODUCTS: DdCard[] = [
+const SERVICES: DdCard[] = [
   {
-    label: "Payments",
-    description: "Everything you need to accept payments globally.",
-    href: "/payments",
-    image: "/images/frame-2147257064-69d613.webp",
-    imageAlt:
-      "Hand holding a smartphone displaying the blue Pay.com logo on a black screen against a grey background.",
+    label: "Website Design & Development",
+    description: "Professional, mobile-friendly websites that turn visitors into customers.",
+    href: "#services",
   },
   {
-    label: "Optimisation",
-    description: "Maximize approval rates and recover failed transactions.",
-    href: "/optimisation",
-    image: "/images/frame-2147257064-69d618.webp",
-    imageAlt: "Person paying $1,000 using tablet and smartphone with contactless payment app displayed.",
+    label: "SEO",
+    description: "Improve your Google rankings and reach customers actively searching for you.",
+    href: "#services",
   },
   {
-    label: "Protection",
-    description: "Prevent fraud and keep chargebacks under control.",
-    href: "/protection",
-    image: "/images/rectangle-23842.webp",
+    label: "Social Media Marketing",
+    description: "Build a strong social presence and generate leads where your customers are.",
+    href: "#services",
   },
   {
-    label: "Treasury",
-    description: "Full clarity and control over your global cash flow.",
-    href: "/treasury",
-    image: "/images/frame-2147257065.webp",
-  },
-];
-
-const DEVELOPERS: DdCard[] = [
-  {
-    label: "Documentation",
-    description: "All the guides and references to build and integrate with Pay.com.",
-    href: "https://apiref.pay.com/",
+    label: "Google & Paid Advertising",
+    description: "Reach customers instantly with carefully managed, high-return campaigns.",
+    href: "#services",
   },
   {
-    label: "API reference",
-    description: "A full technical guide for the Pay.com API.",
-    href: "https://apiref.pay.com/",
+    label: "Content Marketing",
+    description: "Valuable content that builds credibility and encourages customer action.",
+    href: "#services",
   },
   {
-    label: "Connections",
-    description: "See every available integration and provider.",
-    href: "/connections",
+    label: "Analytics & Tracking",
+    description: "Monthly reports, lead tracking, and complete campaign transparency.",
+    href: "#services",
   },
 ];
 
-const RESOURCES: DdCard[] = [
+const INDUSTRIES: DdCard[] = [
   {
-    label: "Blog, Newsroom & Case studies",
-    description: "Read the latest insights, company news, and customer success stories.",
-    href: "/blog",
+    label: "Retail & E-commerce",
+    description: "Drive online sales with targeted campaigns and optimized stores.",
+    href: "#industries",
   },
   {
-    label: "Faq",
-    description: "Everything you wanted to know about Pay.com, answered.",
-    href: "/faq",
+    label: "Real Estate & Local Businesses",
+    description: "Get found by customers in your area when they're ready to buy.",
+    href: "#industries",
+  },
+  {
+    label: "Healthcare & Education",
+    description: "Build trust and reach the people who need your services.",
+    href: "#industries",
+  },
+  {
+    label: "Startups & Enterprise Brands",
+    description: "Scalable strategies for every stage of business growth.",
+    href: "#industries",
+  },
+];
+
+const PROCESS: DdCard[] = [
+  {
+    label: "Understand Your Business",
+    description: "We learn your goals, audience, competitors, and current performance.",
+    href: "#process",
+  },
+  {
+    label: "Create a Growth Strategy",
+    description: "A customized plan focused on your business objectives.",
+    href: "#process",
+  },
+  {
+    label: "Launch & Optimize",
+    description: "We implement campaigns and continuously improve performance.",
+    href: "#process",
+  },
+  {
+    label: "Scale Success",
+    description: "We expand what works to drive even greater growth.",
+    href: "#process",
   },
 ];
 
 const COMPANY: DdCard[] = [
   {
-    label: "About us",
-    description: "Learn who we are and what drives us to build better payments.",
-    href: "/about-us",
+    label: "Why Choose Us",
+    description: "Client-focused, transparent, data-driven, and results-oriented.",
+    href: "#why-us",
   },
   {
-    label: "Careers",
-    description: "See open roles and join a team that's reshaping how the world moves money.",
-    href: "/careers",
+    label: "Contact",
+    description: "Get a free consultation and discover your growth potential.",
+    href: "#contact",
   },
 ];
 
 const MENUS: { label: string; cards: DdCard[] }[] = [
-  { label: "Products", cards: PRODUCTS },
-  { label: "Developers", cards: DEVELOPERS },
-  { label: "Resources", cards: RESOURCES },
+  { label: "Services", cards: SERVICES },
+  { label: "Industries", cards: INDUSTRIES },
+  { label: "Process", cards: PROCESS },
   { label: "Company", cards: COMPANY },
 ];
 
@@ -110,14 +127,6 @@ function DdCardLink({ card, onNavigate }: { card: DdCard; onNavigate: () => void
       <p className="text-[length:var(--typography--text-xs)] leading-[1.5] text-[var(--neutral--neutral-grey-400)]">
         {card.description}
       </p>
-      {card.image && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={card.image}
-          alt={card.imageAlt ?? ""}
-          className="w-full rounded-[var(--radius--radius-s,0.75rem)]"
-        />
-      )}
     </Link>
   );
 }
@@ -148,9 +157,8 @@ export function Navbar() {
       <div className="relative flex w-full max-w-[var(--container--main-size)] items-center justify-between px-[var(--container--size-padding)]">
         <div className="relative z-[4] my-[var(--size--m)] flex w-full items-center justify-between rounded-[16px] bg-[var(--neutral--neutral-black-400)] py-[0.625rem] pr-[0.625rem] pl-[1.25rem]">
           {/* Brand */}
-          <Link href="/" className="z-[4] aspect-[120/24] transition-opacity hover:opacity-80">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/logo-69d50a.svg" alt="Pay.com" width={120} height={23} />
+          <Link href="/" className="z-[4] no-underline transition-opacity hover:opacity-80">
+            <Wordmark className="text-white text-[1.125rem]" />
           </Link>
 
           {/* Desktop menu */}
@@ -177,18 +185,18 @@ export function Navbar() {
 
           {/* Right buttons */}
           <div className="relative z-[4] flex items-center gap-[0.75rem] max-[991px]:gap-[0.5rem]">
-            <a
-              href="https://dashboard.pay.com/"
-              aria-label="Log in"
+            <Link
+              href="#services"
+              aria-label="Our Services"
               className="btn-animate-chars relative inline-flex items-center justify-center px-[1.5rem] py-[0.75rem] no-underline max-[991px]:hidden"
             >
               <div className="btn-animate-chars__bg absolute inset-0 rounded-[99999px] bg-[var(--neutral--neutral-black-300)]" />
               <span className="relative z-[1] text-white text-[length:var(--typography--button-text-s)] font-semibold leading-[1.5] whitespace-nowrap">
-                <StaggerText text="Log in" />
+                <StaggerText text="Our Services" />
               </span>
-            </a>
+            </Link>
             <Link
-              href="/get-in-touch"
+              href="#contact"
               aria-label="Get in Touch"
               className="btn-animate-chars relative inline-flex items-center justify-center px-[1.5rem] py-[0.75rem] no-underline"
             >
@@ -225,7 +233,7 @@ export function Navbar() {
               onMouseLeave={() => setOpenMenu(null)}
             >
               <div className="rounded-[0.75rem] bg-[var(--neutral--neutral-black-400)] p-[1.25rem] pb-[0.875rem]">
-                <div className="flex w-full gap-[1rem] rounded-[16px] bg-[var(--neutral--neutral-black-400)]">
+                <div className="grid w-full grid-cols-3 gap-[1rem] rounded-[16px] bg-[var(--neutral--neutral-black-400)]">
                   {MENUS.find((m) => m.label === openMenu)!.cards.map((card) => (
                     <DdCardLink key={card.label} card={card} onNavigate={() => setOpenMenu(null)} />
                   ))}

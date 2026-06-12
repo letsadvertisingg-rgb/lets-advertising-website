@@ -1,4 +1,3 @@
-import { CountSpan } from "@/components/CountSpan";
 import { ParallaxImage } from "@/components/Parallax";
 
 export function ScaleSection() {
@@ -7,14 +6,14 @@ export function ScaleSection() {
       <div className="w-full max-w-[var(--container--main-size)] px-[var(--container--size-padding)] mx-auto">
         <div className="relative z-[1] flex w-full flex-col items-start gap-[var(--size--5xl)]">
           <h2
-            className="max-w-[12ch] font-semibold text-[length:var(--typography--h2)] max-[991px]:text-[length:var(--typography--h2-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]"
+            className="max-w-[16ch] font-semibold text-[length:var(--typography--h2)] max-[991px]:text-[length:var(--typography--h2-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]"
             style={{ fontVariationSettings: '"wght" 580' }}
           >
-            Scale proven at volume
+            Simple strategies. Measurable results.
           </h2>
 
           <div className="grid w-full grid-cols-2 max-[991px]:grid-cols-1 gap-[var(--size--xl)]">
-            {/* Left: runner photo with 99.999% */}
+            {/* Left: photo card */}
             <div className="relative flex aspect-[628/628] flex-col overflow-hidden rounded-[var(--radius--radius-xxl)] p-[48px]">
               <ParallaxImage
                 src="/images/img-69e0fb.webp"
@@ -23,10 +22,10 @@ export function ScaleSection() {
               />
               <div className="relative z-[1] flex flex-col items-start justify-start gap-[12px]">
                 <div className="font-semibold text-white text-[length:var(--typography--h1)] max-[991px]:text-[length:var(--typography--h1-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
-                  <CountSpan value="99.999" />%
+                  More Visibility
                 </div>
                 <div className="text-white text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)]">
-                  historical uptime
+                  we put your business in front of the right audience
                 </div>
               </div>
             </div>
@@ -35,22 +34,22 @@ export function ScaleSection() {
             <div className="grid grid-cols-2 grid-rows-[1fr_1fr] max-[767px]:grid-cols-1 max-[767px]:grid-rows-none gap-[var(--size--xl)]">
               <div className="rounded-[var(--radius--radius-xxl)] bg-[var(--neutral--neutral-grey-200)] p-[32px]">
                 <div className="relative z-[1] flex flex-col items-start gap-[12px]">
-                  <div className="font-semibold text-[length:var(--typography--h1)] max-[991px]:text-[length:var(--typography--h1-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
-                    <CountSpan value="3" />x
+                  <div className="font-semibold text-[length:var(--typography--h3)] max-[991px]:text-[length:var(--typography--h3-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
+                    More Traffic
                   </div>
                   <div className="text-black text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)]">
-                    faster merchant onboarding than the industry standard
+                    bringing more potential customers to your website
                   </div>
                 </div>
               </div>
 
               <div className="rounded-[var(--radius--radius-xxl)] bg-[var(--brand--brand-electric-blue)] p-[32px]">
                 <div className="relative z-[1] flex flex-col items-start gap-[12px]">
-                  <div className="font-semibold text-white text-[length:var(--typography--h1)] max-[991px]:text-[length:var(--typography--h1-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
-                    <CountSpan value="98" />%
+                  <div className="font-semibold text-white text-[length:var(--typography--h3)] max-[991px]:text-[length:var(--typography--h3-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
+                    More Leads
                   </div>
                   <div className="text-white text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)]">
-                    of customer payments volume
+                    quality leads that turn into paying customers
                   </div>
                 </div>
               </div>
@@ -64,11 +63,11 @@ export function ScaleSection() {
                   className="absolute bottom-0 left-0 right-0 w-full"
                 />
                 <div className="relative z-[1] flex flex-col items-start gap-[12px]">
-                  <div className="font-semibold text-[length:var(--typography--h1)] max-[991px]:text-[length:var(--typography--h1-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
-                    $ billions
+                  <div className="font-semibold text-[length:var(--typography--h3)] max-[991px]:text-[length:var(--typography--h3-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
+                    More Sales & Revenue
                   </div>
                   <div className="text-black text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)]">
-                    processed every month
+                    with clear and transparent reporting on every campaign
                   </div>
                 </div>
               </div>

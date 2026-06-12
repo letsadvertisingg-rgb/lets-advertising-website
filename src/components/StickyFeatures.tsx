@@ -2,45 +2,44 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import type { AnimationItem } from "lottie-web";
 import { StaggerText } from "@/components/StaggerButton";
 import type { StickyFeaturePanel } from "@/types";
 
 const PANELS: StickyFeaturePanel[] = [
   {
-    headline: "Payments",
+    headline: "Websites",
     body:
-      "Capture global sales with a full suite of payment methods, orchestrated through a dynamic, embedded checkout. Secure card data in a centralized vault, and manage your outgoing funds effortlessly with automated payouts.",
-    ctaLabel: "Explore Payments",
-    ctaHref: "/payments",
-    lottiePath: "/lottie/1-payments-animation.json",
+      "Your website is your digital storefront. We create professional, mobile-friendly websites that build trust with visitors, showcase your products and services, generate inquiries and sales, and provide a seamless user experience. More visitors become customers.",
+    ctaLabel: "Explore Web Design",
+    ctaHref: "#contact",
+    lottiePath: "",
     backgroundImage: "/images/getty-images-dmznozrpwge-unsplash-1.webp",
   },
   {
-    headline: "Optimisation",
+    headline: "SEO",
     body:
-      "Turn declines into captured revenue with intelligent routing and automated failover to recover transactions the moment they fail. Network tokens maximize authorization rates, while real-time monitoring keeps your entire stack visible and in control.",
-    ctaLabel: "Explore Optimization",
-    ctaHref: "/optimisation",
-    lottiePath: "/lottie/2-optimization-animation.json",
+      "When people search for your services on Google, you should be easy to find. Our SEO services improve your Google rankings, increase organic website traffic, reach customers actively searching for your services, and build long-term online visibility — more qualified visitors without paying for every click.",
+    ctaLabel: "Explore SEO",
+    ctaHref: "#contact",
+    lottiePath: "",
     backgroundImage: "/images/alexander-pozdeev-xxg-vxkrjmq-unsplash-1.webp",
   },
   {
-    headline: "Protection",
+    headline: "Social Media",
     body:
-      "Defend your margins and cut your dispute workload with a proactive risk engine that blocks fraud with 3DS and passkey authentication. Pre-dispute collaboration and automated workflows resolve disputes before they escalate.",
-    ctaLabel: "Explore Protection",
-    ctaHref: "/protection",
-    lottiePath: "/lottie/3-protection-animation.json",
+      "Your customers spend hours every day on social media. We help your business build a strong social presence, engage with your audience, create professional content, and generate leads through social platforms — more brand awareness and customer engagement.",
+    ctaLabel: "Explore Social",
+    ctaHref: "#contact",
+    lottiePath: "",
     backgroundImage: "/images/rickie-tom-schunemann-rkkjqswcv7o-unsplash-1.webp",
   },
   {
-    headline: "Treasury",
+    headline: "Paid Ads",
     body:
-      "Automate settlement reconciliation and gain absolute financial visibility. Manage global accounts, global payouts, and foreign exchange across every transaction — all from a single command center.",
-    ctaLabel: "Explore Treasury",
-    ctaHref: "/treasury",
-    lottiePath: "/lottie/4-treasury-animation.json",
+      "Want faster results? Our paid campaigns reach customers instantly through Google Ads, YouTube, display, remarketing, and social media ads. We carefully manage your budget to maximize returns — more leads and sales from targeted advertising.",
+    ctaLabel: "Explore Paid Ads",
+    ctaHref: "#contact",
+    lottiePath: "",
     backgroundImage: "/images/image-385.webp",
   },
 ];
@@ -59,47 +58,12 @@ export function StickyFeatures() {
     const headings = Array.from(track.querySelectorAll<HTMLElement>("[data-headline]"));
     const texts = Array.from(track.querySelectorAll<HTMLElement>("[data-text]"));
     const images = Array.from(track.querySelectorAll<HTMLElement>("[data-image]"));
-    const lottieInstances: (AnimationItem | null)[] = [null, null, null, null];
     let active = 0;
     let clickInProgress = false;
-    let cancelled = false;
     let cleanupFns: (() => void)[] = [];
     const textTimers: ReturnType<typeof setTimeout>[] = [];
 
     const isMob = () => window.innerWidth < 992;
-
-    import("lottie-web").then(({ default: lottie }) => {
-      if (cancelled) return;
-      images.forEach((wrapper, i) => {
-        const trigger = wrapper.querySelector<HTMLElement>(".lottie-tab-trigger");
-        if (!trigger) return;
-        lottieInstances[i] = lottie.loadAnimation({
-          container: trigger,
-          renderer: "svg",
-          loop: false,
-          autoplay: false,
-          path: PANELS[i].lottiePath,
-        });
-      });
-      // play tab 0's lottie when track enters 40% of viewport while tab 0 active
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (active !== 0) return;
-            const anim = lottieInstances[0];
-            if (!anim) return;
-            if (entry.isIntersecting) anim.goToAndPlay(0, true);
-            else anim.goToAndStop(0, true);
-          });
-        },
-        { rootMargin: "0px 0px -40% 0px" }
-      );
-      io.observe(track);
-      cleanupFns.push(() => io.disconnect());
-    });
-
-    const playLottie = (i: number) => lottieInstances[i]?.goToAndPlay(0, true);
-    const resetLottie = (i: number) => lottieInstances[i]?.goToAndStop(0, true);
 
     const setImageClip = (i: number, clip: string, animate: boolean) => {
       const img = images[i];
@@ -111,9 +75,6 @@ export function StickyFeatures() {
       const from = active;
       if (to === from || to < 0 || to >= TOTAL) return;
       active = to;
-
-      resetLottie(from);
-      playLottie(to);
 
       headings.forEach((h, i) => {
         h.style.transition = "opacity 0.3s cubic-bezier(0.25,0.46,0.45,0.94)";
@@ -240,11 +201,9 @@ export function StickyFeatures() {
     window.addEventListener("resize", onResize);
 
     return () => {
-      cancelled = true;
       cleanup();
       textTimers.forEach(clearTimeout);
       window.removeEventListener("resize", onResize);
-      lottieInstances.forEach((a) => a?.destroy());
     };
   }, []);
 
@@ -310,9 +269,6 @@ export function StickyFeatures() {
                     sizes="100vw"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
-                  <div className="relative z-[2] h-full w-full">
-                    <div className="lottie-tab-trigger h-full w-full opacity-100" />
-                  </div>
                 </div>
               ))}
             </div>

@@ -3,23 +3,26 @@
 import { useEffect, useRef } from "react";
 
 const INDUSTRIES = [
-  "iGaming & Sports Betting",
-  "eCommerce & Retail",
-  "Digital Media & Streaming",
-  "SaaS & Software Platforms",
-  "Travel & Hospitality",
-  "Crypto & Digital Assets",
-  "WealthTech & Investment Platforms",
+  "Retail & E-commerce",
+  "Real Estate",
+  "Healthcare",
+  "Automotive",
+  "Education",
+  "Hospitality",
+  "Professional Services",
+  "Local Businesses",
+  "Startups",
+  "Enterprise Brands",
 ];
 
-const TOTAL = 7;
+const TOTAL = INDUSTRIES.length;
 const PAUSE = 1200;
 const ANIM = 400;
 
 export function TopCompanies() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLImageElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
@@ -133,6 +136,7 @@ export function TopCompanies() {
 
   return (
     <section
+      id="industries"
       className="flex min-h-screen flex-col items-center justify-center pt-[var(--size--6xl)] pb-[var(--size--6xl)] bg-[url('/images/vector-(1).webp')] bg-top bg-no-repeat"
       style={{ backgroundSize: "auto" }}
     >
@@ -140,7 +144,7 @@ export function TopCompanies() {
         <div className="relative z-[1] grid flex-1 grid-cols-2 max-[991px]:grid-cols-1 gap-[16px]">
           <div className="flex h-full items-center justify-start">
             <h2 className="max-w-[14ch] font-semibold text-[length:var(--typography--h3)] max-[991px]:text-[length:var(--typography--h3-tablet)] leading-[var(--typography--line-height-m)] tracking-[-0.02em]">
-              Top companies use Pay.com for:
+              Industries we serve:
             </h2>
           </div>
 
@@ -148,8 +152,20 @@ export function TopCompanies() {
             ref={wrapperRef}
             className="top-companies-right pointer-events-none relative flex h-full min-h-[480px] w-full flex-col items-start justify-center overflow-hidden"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img ref={logoRef} src="/images/vector-(3).svg" alt="" />
+            <div
+              ref={logoRef}
+              className="flex h-[3rem] w-[3rem] items-center justify-center rounded-[0.75rem] bg-[var(--brand--brand-electric-blue)]"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="#fff"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
             <div className="right-rotate-wrapper">
               <div ref={trackRef} className="relative w-full" style={{ willChange: "transform" }}>
                 <div className="right-companies-wrapper gap-[48px]">

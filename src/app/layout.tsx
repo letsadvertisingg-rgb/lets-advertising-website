@@ -23,18 +23,13 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "All-in-one payment orchestration & acquiring solution | Pay.com",
+  title: "Grow Your Business Online with Confidence | Let's Advertising",
   description:
-    "Stop piecing together rigid payment setups. Pay.com unifies acquiring and orchestration into one smart platform to route, retry, and optimize every transaction.",
-  icons: {
-    icon: "/seo/favicon-64x64.png",
-    apple: "/seo/favicon-512x512.png",
-  },
+    "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales — with clear and transparent reporting.",
   openGraph: {
-    title: "All-in-one payment orchestration & acquiring solution | Pay.com",
+    title: "Grow Your Business Online with Confidence | Let's Advertising",
     description:
-      "Stop piecing together rigid payment setups. Pay.com unifies acquiring and orchestration into one smart platform to route, retry, and optimize every transaction.",
-    images: ["/images/og-image.png"],
+      "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales — with clear and transparent reporting.",
   },
 };
 

@@ -7,24 +7,24 @@ import type { FaqItem } from "@/types";
 
 const FAQ_ITEMS: FaqItem[] = [
   {
-    question: "Does Pay.com support SMBs as well as enterprise merchants?",
+    question: "What services does Let's Advertising offer?",
     answer:
-      "Yes. SMBs get a no-code drop-in checkout, transparent flat-rate pricing, and self-serve onboarding, while enterprise customers get bespoke commercials, dedicated account management, and access to advanced orchestration features like custom routing rules and multi-acquirer setups.",
+      "We cover the full digital marketing stack: website design and development, search engine optimization (SEO), social media marketing, Google and paid advertising, content marketing, and analytics with performance tracking. Whether you need one service or a complete growth strategy, we build a plan around your business objectives.",
   },
   {
-    question: "How fast can I get started and go live?",
+    question: "How do you measure and report results?",
     answer:
-      "Most merchants complete onboarding and start accepting payments within days, not weeks. Developers get sandbox access immediately, and the drop-in checkout or API typically lets you go live in under a week.",
+      "Every marketing decision we make is backed by data. You get monthly performance reports, website analytics, lead tracking, and campaign performance insights. You'll always know how many people visited your website, where your leads came from, which campaigns are working, and what return you're getting on your investment.",
   },
   {
-    question: "Does Pay.com act as the acquirer, or does it connect to third-party acquirers?",
+    question: "Which businesses and industries do you work with?",
     answer:
-      "Both. Pay.com offers its own licensed acquiring in key markets and also connects to third-party acquirers, banks, and APM providers worldwide. That means you can use Pay.com end-to-end or keep your existing providers and let Pay.com orchestrate across them.",
+      "We work with local businesses, startups, and established brands across retail and e-commerce, real estate, healthcare, automotive, education, hospitality, professional services, and enterprise. If your customers are online, we can help you reach them.",
   },
   {
-    question: "What is Pay.com and how does it work?",
+    question: "How do we get started?",
     answer:
-      "Pay.com is an all-in-one payment infrastructure that lets merchants accept online payments through a single, unified platform. It combines a payment gateway, acquiring, orchestration, a token vault, and analytics, so you plug in once and route, optimize, and settle payments globally without stitching together separate vendors.",
+      "It starts with a free consultation. We learn your goals, your target audience, your competitors, and your current marketing performance. Then we build a customized growth strategy, launch and optimize your campaigns, and scale what works to drive even greater growth.",
   },
 ];
 
@@ -77,16 +77,16 @@ export function FaqSection() {
 
           <div className="mx-auto flex w-full max-w-[23.4375rem] flex-col items-center gap-[var(--size--2xl)]">
             <p className="text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)] text-black text-center">
-              Have more questions? Get all the answers.
+              Have more questions? We&rsquo;re happy to answer them.
             </p>
             <Link
-              href="/faq"
-              aria-label="View all FAQs"
+              href="#contact"
+              aria-label="Get in Touch"
               className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer px-[2rem] py-[1rem] no-underline"
             >
               <div className="btn-animate-chars__bg absolute inset-0 rounded-[99999px] border border-black bg-transparent" />
               <span className="relative z-[1] text-black text-[length:var(--typography--button-text-m)] font-semibold leading-[1.5] whitespace-nowrap">
-                <StaggerText text="View all FAQs" />
+                <StaggerText text="Get in Touch" />
               </span>
             </Link>
           </div>

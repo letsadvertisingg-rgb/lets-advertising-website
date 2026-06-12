@@ -1,30 +1,21 @@
-const LOGOS = [
-  "/images/logo-6a16b6.svg",
-  "/images/logo-(1).svg",
-  "/images/logo-(2).svg",
-  "/images/logo-(3).svg",
-  "/images/logo-(4).svg",
-  "/images/paysafe.svg",
-  "/images/capital.svg",
-  "/images/express.svg",
+const BENEFITS = [
+  "Increasing your online visibility",
+  "Bringing more potential customers to your website",
+  "Generating quality leads",
+  "Improving your brand awareness",
+  "Growing your sales and revenue",
+  "Providing clear and transparent reporting",
 ];
 
-function LogoList() {
+function BenefitList() {
   return (
-    <div className="marquee-css-list flex shrink-0 items-end justify-between gap-[3rem]">
-      {LOGOS.map((src, i) => (
-        <div
-          key={i}
-          className={`flex min-w-[10rem] max-w-[10rem] min-h-[2.5rem] max-h-[2.5rem] items-center justify-center${
-            i === LOGOS.length - 1 ? " ml-[1rem]" : ""
-          }`}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={src}
-            alt=""
-            className="marque-css-item-logo box-border h-full w-full min-w-[10rem] max-w-[10rem] max-h-[2.5rem] object-cover overflow-visible"
-          />
+    <div className="marquee-css-list flex shrink-0 items-center justify-between gap-[3rem]">
+      {BENEFITS.map((label, i) => (
+        <div key={i} className="flex shrink-0 items-center gap-[0.75rem] whitespace-nowrap">
+          <span className="text-[var(--system--success)] text-[1.25rem] font-semibold">✓</span>
+          <span className="text-[length:var(--typography--text-l)] font-medium text-black">
+            {label}
+          </span>
         </div>
       ))}
     </div>
@@ -38,14 +29,14 @@ export function LogoMarquee() {
         <div className="relative z-[1] flex flex-col items-start">
           <div className="flex w-full flex-col gap-[var(--size--4xl)] overflow-hidden">
             <p className="text-[length:var(--typography--h6)] font-semibold tracking-[-0.02em] leading-[140%]">
-              Trusted by industry leaders in 32+ countries
+              Trusted by local businesses, startups, and established brands
             </p>
             <div className="marquee-wrapper relative w-full">
               <div className="marquee-left-overlay absolute inset-y-0 left-0 z-[1] w-[100px] bg-[linear-gradient(90deg,#fff,#0000)]" />
               <div className="flex w-full gap-[3rem] overflow-hidden">
-                <LogoList />
-                <LogoList />
-                <LogoList />
+                <BenefitList />
+                <BenefitList />
+                <BenefitList />
               </div>
               <div className="marquee-right-overlay absolute inset-y-0 right-0 w-[100px] bg-[linear-gradient(90deg,#0000,#fff)]" />
             </div>
