@@ -12,6 +12,7 @@ export function ConsultationSection() {
   const [message, setMessage] = useState("");
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -24,6 +25,10 @@ export function ConsultationSection() {
     }
     if (!EMAIL_RE.test(email.trim())) {
       setEmailError(true);
+      hasError = true;
+    }
+    if (!message.trim()) {
+      setMessageError(true);
       hasError = true;
     }
     if (hasError) return;
@@ -127,14 +132,19 @@ export function ConsultationSection() {
 
                   <div className="field-wrap">
                     <div className="field-label">What would you like to grow?</div>
-                    <div className={`input-wrap${message ? " filled" : ""}`}>
+                    <div className={`input-wrap${message ? " filled" : ""}${messageError ? " error" : ""}`}>
                       <input
                         type="text"
                         placeholder="More leads, more sales, better visibility…"
                         value={message}
+                        required
+                        onFocus={() => setMessageError(false)}
                         onChange={(e) => setMessage(e.target.value)}
                       />
                     </div>
+                    <span className={`field-error${messageError ? " visible" : ""}`}>
+                      Please tell us what you&rsquo;d like to grow
+                    </span>
                   </div>
                 </div>
 

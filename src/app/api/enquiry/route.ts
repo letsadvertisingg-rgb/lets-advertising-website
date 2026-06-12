@@ -35,8 +35,11 @@ export async function POST(request: Request) {
   if (!EMAIL_RE.test(email) || email.length > 320) {
     return Response.json({ error: "Please enter a valid email address" }, { status: 400 });
   }
-  if (message.length > 5000) {
-    return Response.json({ error: "Message is too long" }, { status: 400 });
+  if (!message || message.length > 5000) {
+    return Response.json(
+      { error: "Please tell us what you'd like to grow" },
+      { status: 400 }
+    );
   }
 
   const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM, ENQUIRY_TO } = process.env;
@@ -69,13 +72,13 @@ export async function POST(request: Request) {
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
-        `What they'd like to grow: ${message || "(not provided)"}`,
+        `What they'd like to grow: ${message}`,
       ].join("\n"),
       html: `
         <h2>New enquiry from the website</h2>
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>What they'd like to grow:</strong> ${escapeHtml(message) || "(not provided)"}</p>
+        <p><strong>What they'd like to grow:</strong> ${escapeHtml(message)}</p>
       `,
     });
   } catch (err) {
