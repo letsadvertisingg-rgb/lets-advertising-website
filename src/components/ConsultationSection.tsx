@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Wordmark } from "@/components/Wordmark";
 import { RoiCheckIcon } from "@/components/icons";
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export function ConsultationSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,23 +14,38 @@ export function ConsultationSection() {
   const [emailError, setEmailError] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  const submit = () => {
+  const submit = async () => {
     let hasError = false;
     if (!name.trim()) {
       setNameError(true);
       hasError = true;
     }
-    if (!email.trim() || !email.includes("@")) {
+    if (!EMAIL_RE.test(email.trim())) {
       setEmailError(true);
       hasError = true;
     }
     if (hasError) return;
+    setSubmitError("");
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      if (!res.ok) {
+        const data = (await res.json().catch(() => null)) as { error?: string } | null;
+        setSubmitError(data?.error ?? "Something went wrong. Please try again.");
+        return;
+      }
       setSent(true);
-    }, 1200);
+    } catch {
+      setSubmitError("Something went wrong. Please check your connection and try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -81,6 +98,7 @@ export function ConsultationSection() {
                         type="text"
                         placeholder="Jane Smith"
                         value={name}
+                        required
                         onFocus={() => setNameError(false)}
                         onChange={(e) => setName(e.target.value)}
                       />
@@ -97,6 +115,7 @@ export function ConsultationSection() {
                         type="email"
                         placeholder="jane@company.com"
                         value={email}
+                        required
                         onFocus={() => setEmailError(false)}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -128,6 +147,11 @@ export function ConsultationSection() {
                     "Get My Free Consultation"
                   )}
                 </button>
+                {submitError && (
+                  <p className="mt-[0.75rem] text-[13px] leading-[1.5] text-[#dc2626]">
+                    {submitError}
+                  </p>
+                )}
               </>
             )}
           </div>

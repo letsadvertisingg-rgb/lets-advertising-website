@@ -23,11 +23,11 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Grow Your Business Online with Confidence | Let's Advertising",
+  title: "Let's Advertising",
   description:
     "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales — with clear and transparent reporting.",
   openGraph: {
-    title: "Grow Your Business Online with Confidence | Let's Advertising",
+    title: "Let's Advertising",
     description:
       "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales — with clear and transparent reporting.",
   },
