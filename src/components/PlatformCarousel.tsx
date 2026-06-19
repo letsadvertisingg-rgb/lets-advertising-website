@@ -5,7 +5,6 @@ import Swiper from "swiper";
 import { Navigation, Pagination, Scrollbar, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { ParallaxImage } from "@/components/Parallax";
 import type { PlatformSlide } from "@/types";
 
 const SLIDES: PlatformSlide[] = [
@@ -13,37 +12,37 @@ const SLIDES: PlatformSlide[] = [
     tag: "Web Design",
     title: "Website Design & Development",
     body: "Your website is your digital storefront. We create professional, mobile-friendly websites that build trust, showcase your services, and generate inquiries. Result: more visitors become customers.",
-    image: "/images/1.webp",
+    image: "/seo/web-design.png",
   },
   {
     tag: "SEO",
     title: "Search Engine Optimization",
     body: "When people search for your services on Google, you should be easy to find. We improve your rankings, grow organic traffic, and build long-term visibility. Result: more qualified visitors without paying for every click.",
-    image: "/images/2.webp",
+    image: "/seo/seo.png",
   },
   {
     tag: "Social Media",
     title: "Social Media Marketing",
     body: "Your customers spend hours every day on social media. We build your presence, engage your audience, and generate leads through social platforms. Result: more brand awareness and customer engagement.",
-    image: "/images/3.webp",
+    image: "/seo/social-media.png",
   },
   {
     tag: "Paid Ads",
     title: "Google & Paid Advertising",
     body: "Want faster results? Google Ads, YouTube, display, remarketing, and social ads — with your budget carefully managed to maximize returns. Result: more leads and sales from targeted advertising.",
-    image: "/images/4.webp",
+    image: "/seo/paid-ads.png",
   },
   {
     tag: "Content",
     title: "Content Marketing",
     body: "People buy from businesses they trust. We create valuable content that educates your audience, builds credibility, and improves SEO. Result: stronger customer relationships and increased conversions.",
-    image: "/images/01.webp",
+    image: "/seo/content-marketing.png",
   },
   {
     tag: "Analytics",
     title: "Analytics & Performance Tracking",
     body: "Every marketing decision should be backed by data. Monthly reports, website analytics, lead tracking, and campaign insights. Result: complete transparency and smarter business decisions.",
-    image: "/images/02.webp",
+    image: "/seo/analytics.png",
   },
 ];
 
@@ -201,17 +200,13 @@ export function PlatformCarousel() {
                   <div key={slide.tag} className="swiper-slide" role="listitem">
                     <div className="flex flex-col gap-[var(--size--xl)]">
                       <div className="swiper-image-wrapper relative mb-[var(--size--xl)] aspect-square w-full overflow-hidden rounded-[32px]">
-                        <ParallaxImage
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
                           src={slide.image}
                           alt={SLIDE_ALTS[i]}
-                          className="absolute inset-0 h-full w-full max-h-full object-cover"
+                          className="absolute inset-0 h-full w-full object-contain"
                           sizes="100vw"
                         />
-                        <div className="absolute bottom-[24px] left-[24px] flex items-center justify-start gap-[var(--size--xs)] rounded-[var(--radius--radius-circle)] border border-[#fff3] bg-[#0000000d] px-[var(--size--m)] py-[var(--size--xs)] font-medium backdrop-blur-[15px]">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img src="/images/dot.svg" alt="" />
-                          <div className="text-white text-[length:var(--typography--text-m)]">{slide.tag}</div>
-                        </div>
                       </div>
                       <div className="flex flex-col gap-[var(--size--m)]">
                         <div className="max-w-[300px] font-semibold text-[length:var(--typography--h5)] max-[991px]:text-[length:var(--typography--h5-tablet)] leading-[var(--typography--line-height)] tracking-[-0.02em]">
