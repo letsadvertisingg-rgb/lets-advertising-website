@@ -9,30 +9,31 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   {
     heading: "Services",
     links: [
-      { label: "Website Design & Development", href: "#services" },
-      { label: "SEO", href: "#services" },
-      { label: "Social Media Marketing", href: "#services" },
-      { label: "Google & Paid Advertising", href: "#services" },
-      { label: "Content Marketing", href: "#services" },
-      { label: "Analytics & Tracking", href: "#services" },
+      { label: "Website Design & Development", href: "/#services" },
+      { label: "SEO", href: "/#services" },
+      { label: "Answer Engine Optimization (AEO)", href: "/aeo-services" },
+      { label: "Social Media Marketing", href: "/social-media-marketing" },
+      { label: "Google & Paid Advertising", href: "/paid-advertising" },
+      { label: "Content Marketing", href: "/content-marketing" },
+      { label: "Analytics & Tracking", href: "/analytics-tracking" },
     ],
   },
   {
     heading: "Industries",
     links: [
-      { label: "Retail & E-commerce", href: "#industries" },
-      { label: "Real Estate", href: "#industries" },
-      { label: "Healthcare", href: "#industries" },
-      { label: "Local Businesses", href: "#industries" },
-      { label: "Startups", href: "#industries" },
+      { label: "Retail & E-commerce", href: "/#industries" },
+      { label: "Real Estate", href: "/#industries" },
+      { label: "Healthcare", href: "/#industries" },
+      { label: "Local Businesses", href: "/#industries" },
+      { label: "Startups", href: "/#industries" },
     ],
   },
   {
     heading: "Company",
     links: [
-      { label: "Why Choose Us", href: "#why-us" },
-      { label: "Our Process", href: "#process" },
-      { label: "Contact", href: "#contact" },
+      { label: "Why Choose Us", href: "/#why-us" },
+      { label: "Our Process", href: "/#process" },
+      { label: "Contact", href: "/#contact" },
     ],
   },
 ];
@@ -101,7 +102,7 @@ export function Footer() {
       {/* Copyright */}
       <div className="w-full max-w-[var(--container--main-size)] px-[var(--container--size-padding)] mx-auto mt-[var(--size--8xl)]">
         <div className="text-[length:var(--typography--text-s)] leading-[var(--typography--line-height-l)]">
-          Copyright © {year} Let&rsquo;s Advertising — All rights reserved.
+          Copyright © {year} Let&rsquo;s Advertising. All rights reserved.
         </div>
       </div>
 

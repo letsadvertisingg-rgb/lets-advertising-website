@@ -41,6 +41,7 @@ export interface PlatformSlide {
   title: string;
   body: string;
   image: string;
+  href?: string;
 }
 
 export interface FaqItem {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import Swiper from "swiper";
 import { Navigation, Pagination, Scrollbar, FreeMode } from "swiper/modules";
 import "swiper/css";
@@ -21,32 +22,79 @@ const SLIDES: PlatformSlide[] = [
     image: "/seo/seo.png",
   },
   {
+    tag: "AEO",
+    title: "Answer Engine Optimization",
+    body: "AI search is the new frontier. We optimize your content and authority so ChatGPT, Google AI Overviews, Gemini, and Perplexity recommend your business. Result: visibility where customers ask AI for answers.",
+    image: "/seo/aeo.png",
+    href: "/aeo-services",
+  },
+  {
     tag: "Social Media",
     title: "Social Media Marketing",
     body: "Your customers spend hours every day on social media. We build your presence, engage your audience, and generate leads through social platforms. Result: more brand awareness and customer engagement.",
     image: "/seo/social-media.png",
+    href: "/social-media-marketing",
   },
   {
     tag: "Paid Ads",
     title: "Google & Paid Advertising",
-    body: "Want faster results? Google Ads, YouTube, display, remarketing, and social ads — with your budget carefully managed to maximize returns. Result: more leads and sales from targeted advertising.",
+    body: "Want faster results? Google Ads, YouTube, display, remarketing, and social ads, with your budget carefully managed to maximize returns. Result: more leads and sales from targeted advertising.",
     image: "/seo/paid-ads.png",
+    href: "/paid-advertising",
   },
   {
     tag: "Content",
     title: "Content Marketing",
     body: "People buy from businesses they trust. We create valuable content that educates your audience, builds credibility, and improves SEO. Result: stronger customer relationships and increased conversions.",
     image: "/seo/content-marketing.png",
+    href: "/content-marketing",
   },
   {
     tag: "Analytics",
     title: "Analytics & Performance Tracking",
     body: "Every marketing decision should be backed by data. Monthly reports, website analytics, lead tracking, and campaign insights. Result: complete transparency and smarter business decisions.",
     image: "/seo/analytics.png",
+    href: "/analytics-tracking",
   },
 ];
 
-const SLIDE_ALTS = ["", "", "", "", "", ""];
+const SLIDE_ALTS = ["", "", "", "", "", "", ""];
+
+function SlideContent({
+  slide,
+  alt,
+  linked = false,
+}: {
+  slide: PlatformSlide;
+  alt: string;
+  linked?: boolean;
+}) {
+  return (
+    <>
+      <div
+        className={`swiper-image-wrapper relative mb-[var(--size--xl)] aspect-square w-full overflow-hidden rounded-[32px] ${linked ? "transition-transform duration-300 group-hover:scale-[1.02]" : ""}`}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={slide.image}
+          alt={alt}
+          className="absolute inset-0 h-full w-full object-contain"
+          sizes="100vw"
+        />
+      </div>
+      <div className="flex flex-col gap-[var(--size--m)]">
+        <div
+          className={`max-w-[300px] font-semibold text-[length:var(--typography--h5)] max-[991px]:text-[length:var(--typography--h5-tablet)] leading-[var(--typography--line-height)] tracking-[-0.02em] ${linked ? "text-black group-hover:text-[var(--brand--brand-electric-blue)] transition-colors" : ""}`}
+        >
+          {slide.title}
+        </div>
+        <div className="text-black text-[length:var(--typography--text-m)] leading-[var(--typography--line-height-l)]">
+          {slide.body}
+        </div>
+      </div>
+    </>
+  );
+}
 
 export function PlatformCarousel() {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -198,25 +246,15 @@ export function PlatformCarousel() {
               <div className="swiper-wrapper" role="list">
                 {SLIDES.map((slide, i) => (
                   <div key={slide.tag} className="swiper-slide" role="listitem">
-                    <div className="flex flex-col gap-[var(--size--xl)]">
-                      <div className="swiper-image-wrapper relative mb-[var(--size--xl)] aspect-square w-full overflow-hidden rounded-[32px]">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={slide.image}
-                          alt={SLIDE_ALTS[i]}
-                          className="absolute inset-0 h-full w-full object-contain"
-                          sizes="100vw"
-                        />
+                    {slide.href ? (
+                      <Link href={slide.href} className="group flex flex-col gap-[var(--size--xl)] no-underline">
+                        <SlideContent slide={slide} alt={SLIDE_ALTS[i]} linked />
+                      </Link>
+                    ) : (
+                      <div className="flex flex-col gap-[var(--size--xl)]">
+                        <SlideContent slide={slide} alt={SLIDE_ALTS[i]} />
                       </div>
-                      <div className="flex flex-col gap-[var(--size--m)]">
-                        <div className="max-w-[300px] font-semibold text-[length:var(--typography--h5)] max-[991px]:text-[length:var(--typography--h5-tablet)] leading-[var(--typography--line-height)] tracking-[-0.02em]">
-                          {slide.title}
-                        </div>
-                        <div className="text-black text-[length:var(--typography--text-m)] leading-[var(--typography--line-height-l)]">
-                          {slide.body}
-                        </div>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>

@@ -282,7 +282,7 @@ export function GetBackSection() {
             <div className="flex aspect-square flex-col items-center justify-between gap-[24px] rounded-[var(--radius--radius-xxl)] bg-[var(--neutral--neutral-grey-200)] px-[2rem] pt-[2rem]">
               <div className="text-black text-[length:var(--typography--text-m)] leading-[var(--typography--line-height-l)]">
                 <span className="font-semibold">Client-focused approach.</span> Your success is our
-                priority — every strategy starts with your goals, not ours.
+                priority. Every strategy starts with your goals, not ours.
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -295,7 +295,7 @@ export function GetBackSection() {
             <div className="flex aspect-square flex-col items-center justify-between gap-[24px] rounded-[var(--radius--radius-xxl)] bg-[var(--neutral--neutral-grey-200)] px-[2rem] pt-[2rem]">
               <div className="text-black text-[length:var(--typography--text-m)] leading-[var(--typography--line-height-l)]">
                 <strong>Data-driven decisions.</strong> Every strategy is backed by real performance
-                insights — campaigns are measured, refined, and improved continuously.
+                insights. Campaigns are measured, refined, and improved continuously.
               </div>
               <div className="max-h-[10.625rem]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -305,7 +305,7 @@ export function GetBackSection() {
 
             <div className="flex aspect-square flex-col items-center justify-between gap-[24px] rounded-[var(--radius--radius-xxl)] bg-[var(--neutral--neutral-grey-200)] p-[2rem] pb-[24px]">
               <div className="text-black text-[length:var(--typography--text-m)] leading-[var(--typography--line-height-l)]">
-                <strong>Transparent communication.</strong> No confusing marketing jargon — just
+                <strong>Transparent communication.</strong> No confusing marketing jargon, just
                 clear updates, honest reporting, and results-oriented execution.
               </div>
               <div className="flex w-full flex-col gap-[0.75rem]">

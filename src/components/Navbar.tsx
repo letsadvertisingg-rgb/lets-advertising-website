@@ -16,32 +16,37 @@ const SERVICES: DdCard[] = [
   {
     label: "Website Design & Development",
     description: "Professional, mobile-friendly websites that turn visitors into customers.",
-    href: "#services",
+    href: "/#services",
   },
   {
     label: "SEO",
     description: "Improve your Google rankings and reach customers actively searching for you.",
-    href: "#services",
+    href: "/#services",
+  },
+  {
+    label: "Answer Engine Optimization (AEO)",
+    description: "Get recommended by ChatGPT, Google AI Overviews, Gemini, and Perplexity.",
+    href: "/aeo-services",
   },
   {
     label: "Social Media Marketing",
     description: "Build a strong social presence and generate leads where your customers are.",
-    href: "#services",
+    href: "/social-media-marketing",
   },
   {
     label: "Google & Paid Advertising",
     description: "Reach customers instantly with carefully managed, high-return campaigns.",
-    href: "#services",
+    href: "/paid-advertising",
   },
   {
     label: "Content Marketing",
     description: "Valuable content that builds credibility and encourages customer action.",
-    href: "#services",
+    href: "/content-marketing",
   },
   {
     label: "Analytics & Tracking",
     description: "Monthly reports, lead tracking, and complete campaign transparency.",
-    href: "#services",
+    href: "/analytics-tracking",
   },
 ];
 
@@ -49,22 +54,22 @@ const INDUSTRIES: DdCard[] = [
   {
     label: "Retail & E-commerce",
     description: "Drive online sales with targeted campaigns and optimized stores.",
-    href: "#industries",
+    href: "/#industries",
   },
   {
     label: "Real Estate & Local Businesses",
     description: "Get found by customers in your area when they're ready to buy.",
-    href: "#industries",
+    href: "/#industries",
   },
   {
     label: "Healthcare & Education",
     description: "Build trust and reach the people who need your services.",
-    href: "#industries",
+    href: "/#industries",
   },
   {
     label: "Startups & Enterprise Brands",
     description: "Scalable strategies for every stage of business growth.",
-    href: "#industries",
+    href: "/#industries",
   },
 ];
 
@@ -72,22 +77,22 @@ const PROCESS: DdCard[] = [
   {
     label: "Understand Your Business",
     description: "We learn your goals, audience, competitors, and current performance.",
-    href: "#process",
+    href: "/#process",
   },
   {
     label: "Create a Growth Strategy",
     description: "A customized plan focused on your business objectives.",
-    href: "#process",
+    href: "/#process",
   },
   {
     label: "Launch & Optimize",
     description: "We implement campaigns and continuously improve performance.",
-    href: "#process",
+    href: "/#process",
   },
   {
     label: "Scale Success",
     description: "We expand what works to drive even greater growth.",
-    href: "#process",
+    href: "/#process",
   },
 ];
 
@@ -95,12 +100,12 @@ const COMPANY: DdCard[] = [
   {
     label: "Why Choose Us",
     description: "Client-focused, transparent, data-driven, and results-oriented.",
-    href: "#why-us",
+    href: "/#why-us",
   },
   {
     label: "Contact",
     description: "Get a free consultation and discover your growth potential.",
-    href: "#contact",
+    href: "/#contact",
   },
 ];
 
@@ -186,7 +191,7 @@ export function Navbar() {
           {/* Right buttons */}
           <div className="relative z-[4] flex items-center gap-[0.75rem] max-[991px]:gap-[0.5rem]">
             <Link
-              href="#services"
+              href="/#services"
               aria-label="Our Services"
               className="btn-animate-chars relative inline-flex items-center justify-center px-[1.5rem] py-[0.75rem] no-underline max-[991px]:hidden"
             >

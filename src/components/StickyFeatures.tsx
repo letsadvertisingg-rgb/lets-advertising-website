@@ -18,7 +18,7 @@ const PANELS: StickyFeaturePanel[] = [
   {
     headline: "SEO",
     body:
-      "When people search for your services on Google, you should be easy to find. Our SEO services improve your Google rankings, increase organic website traffic, reach customers actively searching for your services, and build long-term online visibility — more qualified visitors without paying for every click.",
+      "When people search for your services on Google, you should be easy to find. Our SEO services improve your Google rankings, increase organic website traffic, reach customers actively searching for your services, and build long-term online visibility. Result: more qualified visitors without paying for every click.",
     ctaLabel: "Explore SEO",
     ctaHref: "#contact",
     lottiePath: "",
@@ -27,18 +27,18 @@ const PANELS: StickyFeaturePanel[] = [
   {
     headline: "Social Media",
     body:
-      "Your customers spend hours every day on social media. We help your business build a strong social presence, engage with your audience, create professional content, and generate leads through social platforms — more brand awareness and customer engagement.",
+      "Your customers spend hours every day on social media. We help your business build a strong social presence, engage with your audience, create professional content, and generate leads through social platforms. Result: more brand awareness and customer engagement.",
     ctaLabel: "Explore Social",
-    ctaHref: "#contact",
+    ctaHref: "/social-media-marketing",
     lottiePath: "",
     backgroundImage: "/images/rickie-tom-schunemann-rkkjqswcv7o-unsplash-1.webp",
   },
   {
     headline: "Paid Ads",
     body:
-      "Want faster results? Our paid campaigns reach customers instantly through Google Ads, YouTube, display, remarketing, and social media ads. We carefully manage your budget to maximize returns — more leads and sales from targeted advertising.",
+      "Want faster results? Our paid campaigns reach customers instantly through Google Ads, YouTube, display, remarketing, and social media ads. We carefully manage your budget to maximize returns. Result: more leads and sales from targeted advertising.",
     ctaLabel: "Explore Paid Ads",
-    ctaHref: "#contact",
+    ctaHref: "/paid-advertising",
     lottiePath: "",
     backgroundImage: "/images/image-385.webp",
   },

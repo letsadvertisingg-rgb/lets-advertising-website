@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Merriweather } from "next/font/google";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const googleSansFlex = localFont({
@@ -23,13 +24,14 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: "Let's Advertising",
   description:
-    "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales — with clear and transparent reporting.",
+    "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales, with clear and transparent reporting.",
   openGraph: {
     title: "Let's Advertising",
     description:
-      "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales — with clear and transparent reporting.",
+      "We help businesses attract the right audience, generate quality leads, and turn visitors into paying customers. More customers, more leads, more sales, with clear and transparent reporting.",
   },
 };
 
