@@ -1,4 +1,4 @@
-import { getSiteUrl, SITE_ROUTES } from "@/lib/site";
+import { getSiteUrl } from "@/lib/site";
 
 function buildLlmsTxt(): string {
   const baseUrl = getSiteUrl();
