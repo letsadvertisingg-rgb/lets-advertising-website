@@ -6,7 +6,6 @@ import { ScaleSection } from "@/components/ScaleSection";
 import { StickyFeatures } from "@/components/StickyFeatures";
 import { CaseStudies } from "@/components/CaseStudies";
 import { TopCompanies } from "@/components/TopCompanies";
-import { ConsultationSection } from "@/components/ConsultationSection";
 import { PlatformCarousel } from "@/components/PlatformCarousel";
 import { FaqSection } from "@/components/FaqSection";
 import { CtaSection } from "@/components/CtaSection";
@@ -26,7 +25,6 @@ export default function Home() {
         <TopCompanies />
         <PlatformCarousel />
         <FaqSection />
-        <ConsultationSection />
         <CtaSection />
       </main>
       <Footer />
