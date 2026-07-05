@@ -33,6 +33,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
     links: [
       { label: "Why Choose Us", href: "/#why-us" },
       { label: "Our Process", href: "/#process" },
+      { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/#contact" },
     ],
   },

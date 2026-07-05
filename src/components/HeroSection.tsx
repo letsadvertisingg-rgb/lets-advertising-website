@@ -97,7 +97,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center bg-black pt-[9.85rem] pb-[var(--size--8xl)]">
       {/* Diagonal drifting image marquee background */}
-      <div className="absolute inset-0 overflow-hidden bg-black">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden bg-black">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/bottom-left-shape.svg"

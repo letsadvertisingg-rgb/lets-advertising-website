@@ -5,7 +5,7 @@ export function BlogListingPage() {
   return (
     <>
       <section className="relative flex flex-col items-center bg-black pt-[9.85rem] pb-[var(--size--8xl)] max-[767px]:pb-[var(--size--5xl)]">
-        <div className="absolute inset-0 overflow-hidden bg-black">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden bg-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#57e5b222,transparent_60%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(#fff0,#000)]" />
         </div>
