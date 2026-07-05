@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { BLOG_POSTS } from "@/lib/blog/posts";
 import { getSiteUrl } from "@/lib/site";
 
 type SitemapRoute = {
@@ -15,6 +16,12 @@ const SITEMAP_ROUTES: SitemapRoute[] = [
   { path: "/content-marketing", changeFrequency: "monthly", priority: 0.9 },
   { path: "/analytics-tracking", changeFrequency: "monthly", priority: 0.9 },
   { path: "/aeo-services", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
+  ...BLOG_POSTS.map((post) => ({
+    path: `/blog/${post.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  })),
   { path: "/llms.txt", changeFrequency: "monthly", priority: 0.5 },
 ];
 
