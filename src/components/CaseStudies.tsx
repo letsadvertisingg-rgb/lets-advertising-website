@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import { ParallaxImage } from "@/components/Parallax";
+import { bookingLinkProps } from "@/lib/site";
 
 const KNOW_ITEMS = [
   "How many people visited your website",
@@ -27,7 +28,7 @@ export function CaseStudies() {
                 </h3>
                 <div className="flex flex-col items-start">
                   <Link
-                    href="#contact"
+                    {...bookingLinkProps}
                     aria-label="Get Your Free Consultation"
                     className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer px-[2rem] py-[1rem] no-underline"
                   >

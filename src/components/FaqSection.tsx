@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import type { FaqItem } from "@/types";
+import { bookingLinkProps } from "@/lib/site";
 
 const FAQ_ITEMS: FaqItem[] = [
   {
@@ -80,7 +81,7 @@ export function FaqSection() {
               Have more questions? We&rsquo;re happy to answer them.
             </p>
             <Link
-              href="#contact"
+              {...bookingLinkProps}
               aria-label="Get in Touch"
               className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer px-[2rem] py-[1rem] no-underline"
             >

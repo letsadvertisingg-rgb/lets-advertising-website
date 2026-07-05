@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
+import { bookingLinkProps } from "@/lib/site";
 
 const WORDS = ["More Customers.", "More Leads.", "More Sales."];
 
@@ -138,7 +139,7 @@ export function HeroSection() {
             </div>
             <div className="mx-auto mt-[var(--size--2xl)] grid max-w-[23rem] grid-cols-[auto_auto] items-center justify-items-stretch gap-[1rem]">
               <Link
-                href="#contact"
+                {...bookingLinkProps}
                 aria-label="Free Consultation"
                 className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
               >

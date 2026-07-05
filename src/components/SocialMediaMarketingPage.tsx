@@ -5,6 +5,7 @@ import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import { ServiceHeroImage } from "@/components/ServiceHeroImage";
 import type { FaqItem } from "@/types";
+import { bookingLinkProps } from "@/lib/site";
 
 const BENEFITS = [
   "Increase brand awareness",
@@ -324,7 +325,7 @@ export function SocialMediaMarketingPage() {
               </p>
               <div className="flex flex-wrap gap-[1rem] pt-[var(--size--m)]">
                 <Link
-                  href="/#contact"
+                  {...bookingLinkProps}
                   aria-label="Get Started Today"
                   className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
                 >
@@ -564,7 +565,7 @@ export function SocialMediaMarketingPage() {
               ))}
             </ul>
             <Link
-              href="/#contact"
+              {...bookingLinkProps}
               aria-label="Contact Let's Advertising"
               className="btn-animate-chars relative mt-[var(--size--m)] inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
             >

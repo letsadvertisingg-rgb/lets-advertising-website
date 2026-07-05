@@ -4,6 +4,7 @@ import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import { Wordmark } from "@/components/Wordmark";
 import type { FooterColumn } from "@/types";
+import { BOOKING_URL, bookingLinkProps } from "@/lib/site";
 
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
@@ -34,7 +35,7 @@ const FOOTER_COLUMNS: FooterColumn[] = [
       { label: "Why Choose Us", href: "/#why-us" },
       { label: "Our Process", href: "/#process" },
       { label: "Blog", href: "/blog" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Contact", href: BOOKING_URL },
     ],
   },
 ];
@@ -50,6 +51,9 @@ function FooterLinkColumn({ column }: { column: FooterColumn }) {
           <Link
             key={link.label + i}
             href={link.href}
+            {...(link.href.startsWith("http")
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
             className={`footer-link is-animated text-white no-underline ${i === 0 ? "pt-0 pb-2" : "py-2"}`}
           >
             <div className="text-[length:var(--typography--text-s)] leading-[var(--typography--line-height-l)]">
@@ -80,7 +84,7 @@ export function Footer() {
               </div>
             </div>
             <Link
-              href="#contact"
+              {...bookingLinkProps}
               aria-label="Get in Touch"
               className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer px-[2rem] py-[1rem] no-underline"
             >

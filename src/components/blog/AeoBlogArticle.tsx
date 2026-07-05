@@ -6,6 +6,7 @@ import { BlogArticleLayout } from "@/components/blog/BlogArticleLayout";
 import type { TocItem } from "@/components/blog/TableOfContents";
 import { StaggerText } from "@/components/StaggerButton";
 import type { FaqItem } from "@/types";
+import { bookingLinkProps } from "@/lib/site";
 
 const TOC_ITEMS: TocItem[] = [
   { id: "what-is-aeo", label: "What Is AEO?" },
@@ -649,7 +650,7 @@ export function AeoBlogArticle() {
               answer your customers are looking for.
             </p>
             <Link
-              href="/#contact"
+              {...bookingLinkProps}
               aria-label="Contact us for a Free AEO Audit"
               className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
             >

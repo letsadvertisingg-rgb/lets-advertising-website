@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { FaqItem } from "@/types";
+import { BOOKING_URL } from "@/lib/site";
 
 export function ArticleFaq({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -154,7 +155,7 @@ export function BlogArticleCta({
   body,
   subtext,
   ctaLabel,
-  ctaHref = "/#contact",
+  ctaHref = BOOKING_URL,
 }: {
   title: string;
   body: string;
@@ -179,6 +180,7 @@ export function BlogArticleCta({
           )}
           <Link
             href={ctaHref}
+            {...(ctaHref.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             aria-label={ctaLabel}
             className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
           >

@@ -10,6 +10,7 @@ import {
   BulletList,
 } from "@/components/blog/BlogArticleParts";
 import type { TocItem } from "@/components/blog/TableOfContents";
+import { bookingLinkProps } from "@/lib/site";
 
 const TOC_ITEMS: TocItem[] = [
   { id: "what-is-ai-search", label: "What Is AI Search?" },
@@ -307,7 +308,7 @@ export function AiSearchDigitalMarketingBlogArticle() {
               tomorrow&apos;s.
             </ArticleParagraph>
             <Link
-              href="/#contact"
+              {...bookingLinkProps}
               className="inline-flex text-[length:var(--typography--text-m)] font-semibold text-[var(--brand--brand-electric-blue)] no-underline hover:underline"
             >
               Talk to our team →

@@ -1,4 +1,4 @@
-import { getSiteUrl } from "@/lib/site";
+import { BOOKING_URL, getSiteUrl } from "@/lib/site";
 
 function buildLlmsTxt(): string {
   const baseUrl = getSiteUrl();
@@ -39,7 +39,7 @@ function buildLlmsTxt(): string {
 
 ## Contact
 
-- [Free consultation](${baseUrl}/#contact): Contact form on the homepage for inquiries and strategy calls.
+- [Book a free consultation](${BOOKING_URL}): Schedule a 30-minute strategy call.
 
 ## Crawling
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import { Wordmark } from "@/components/Wordmark";
 import { ChevronDownIcon } from "@/components/icons";
+import { BOOKING_URL, bookingLinkProps } from "@/lib/site";
 
 interface DdCard {
   label: string;
@@ -110,7 +111,7 @@ const COMPANY: DdCard[] = [
   {
     label: "Contact",
     description: "Get a free consultation and discover your growth potential.",
-    href: "/#contact",
+    href: BOOKING_URL,
   },
 ];
 
@@ -122,9 +123,11 @@ const MENUS: { label: string; cards: DdCard[] }[] = [
 ];
 
 function DdCardLink({ card, onNavigate }: { card: DdCard; onNavigate: () => void }) {
+  const external = card.href.startsWith("http");
   return (
     <Link
       href={card.href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       onClick={onNavigate}
       className="is-animated flex min-w-0 flex-col gap-[0.75rem] rounded-[0.75rem] p-[0.75rem] no-underline transition-colors hover:bg-white/5"
     >
@@ -213,7 +216,7 @@ export function Navbar() {
               </span>
             </Link>
             <Link
-              href="/#contact"
+              {...bookingLinkProps}
               aria-label="Get in Touch"
               className="btn-animate-chars relative inline-flex items-center justify-center px-[1.5rem] py-[0.75rem] no-underline"
             >

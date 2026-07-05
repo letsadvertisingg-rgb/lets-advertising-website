@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { bookingLinkProps } from "@/lib/site";
 
 export function CtaSection() {
   const buttonRef = useRef<HTMLAnchorElement>(null);
@@ -34,7 +35,7 @@ export function CtaSection() {
         <div className="cta-wrapper mx-auto flex max-w-[53.125rem] flex-col gap-[32px] max-[767px]:gap-[48px] max-[767px]:items-center text-center text-[1.5rem] leading-[1.5em] overflow-visible">
           <Link
             ref={buttonRef}
-            href="#contact"
+            {...bookingLinkProps}
             className="cta-button relative z-[1] flex items-center justify-start h-[180px] min-h-[180px] p-[16px] border-2 border-white rounded-tr-[24px] rounded-bl-[24px] rounded-tl-none rounded-br-none transition-all duration-[400ms] hover:bg-[#0053ef] hover:border-[#0053ef] hover:shadow-[0_0_194px_#0053ef] max-[767px]:w-full max-[767px]:max-w-[400px] max-[767px]:h-[72px] max-[767px]:min-h-[72px] max-[767px]:p-[6px] max-[767px]:rounded-tr-[12px] max-[767px]:rounded-bl-[12px]"
             onMouseEnter={() => setBgVisible(true)}
             onMouseLeave={() => setBgVisible(false)}

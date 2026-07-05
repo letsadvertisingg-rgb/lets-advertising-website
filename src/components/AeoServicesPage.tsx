@@ -5,6 +5,7 @@ import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import { ServiceHeroImage } from "@/components/ServiceHeroImage";
 import type { FaqItem } from "@/types";
+import { bookingLinkProps } from "@/lib/site";
 
 const WHY_AEO = [
   "AI-powered search is growing faster than traditional search.",
@@ -285,7 +286,7 @@ export function AeoServicesPage() {
               </p>
               <div className="flex flex-wrap gap-[1rem] pt-[var(--size--m)]">
                 <Link
-                  href="/#contact"
+                  {...bookingLinkProps}
                   aria-label="Book a Free AEO Consultation"
                   className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
                 >
@@ -538,7 +539,7 @@ export function AeoServicesPage() {
             </ul>
             <div className="flex flex-wrap justify-center gap-[1rem]">
               <Link
-                href="/#contact"
+                {...bookingLinkProps}
                 aria-label="Book a Free AEO Consultation"
                 className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
               >
@@ -548,7 +549,7 @@ export function AeoServicesPage() {
                 </span>
               </Link>
               <Link
-                href="/#contact"
+                {...bookingLinkProps}
                 aria-label="Get an AI Visibility Audit"
                 className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer px-[2rem] py-[1rem] no-underline"
               >
