@@ -93,6 +93,10 @@ const TRENDS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "How AI Search Is Changing Digital Marketing",
     href: "/blog/how-ai-search-is-changing-digital-marketing",
   },
@@ -141,7 +145,12 @@ export function FutureOfAiSearchBlogArticle() {
             </ArticleParagraph>
             <ArticleParagraph>
               In this article, we&apos;ll explore the future of AI search in 2026, the trends shaping
-              the industry, and the practical steps businesses can take to prepare.
+              the industry, and the practical steps businesses can take to prepare. For a deeper look
+              at how AI is reshaping SEO workflows, see our{" "}
+              <Link href="/blog/how-ai-is-transforming-seo-2026" className="font-semibold text-[var(--brand--brand-electric-blue)] no-underline hover:underline">
+                guide to AI-powered SEO in 2026
+              </Link>
+              .
             </ArticleParagraph>
           </div>
 

@@ -12,6 +12,18 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: "how-ai-is-transforming-seo-2026",
+    title: "How AI is Transforming SEO: The Future of Search in 2026",
+    seoTitle: "How AI is Transforming SEO in 2026 | The Future of Search",
+    description:
+      "Discover how AI is transforming SEO with smarter search algorithms, AI-powered content optimization, keyword research, technical SEO, and search experiences. Learn how businesses can adapt and grow.",
+    category: "AI Search & SEO",
+    author: "Let's Advertising",
+    date: "July 11, 2026",
+    readTime: "14 min read",
+    publishedDate: "2026-07-11",
+  },
+  {
     slug: "ultimate-seo-guide-for-beginners",
     title: "The Ultimate SEO Guide for Beginners: Everything You Need to Know in 2026",
     seoTitle: "The Ultimate SEO Guide for Beginners | Learn SEO Basics in 2026",

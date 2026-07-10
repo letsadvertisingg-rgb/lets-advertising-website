@@ -309,6 +309,10 @@ const SUMMARY_ITEMS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "How to Find the Right Keywords for Your Business",
     href: "/blog/how-to-find-right-keywords-for-business",
   },
@@ -366,8 +370,11 @@ export function OnPageSeoChecklistBlogArticle() {
           <div className="flex flex-col gap-[var(--size--l)] pb-[var(--size--l)]">
             <ArticleParagraph>
               Ranking on Google has become more competitive than ever. With search engines
-              prioritizing helpful, user-focused content and AI-enhanced search experiences, simply
-              adding keywords to a page is no longer enough.
+              prioritizing helpful, user-focused content and{" "}
+              <Link href="/blog/how-ai-is-transforming-seo-2026" className={INLINE_LINK}>
+                AI-enhanced search experiences
+              </Link>
+              , simply adding keywords to a page is no longer enough.
             </ArticleParagraph>
             <ArticleParagraph>
               Today&apos;s On-Page SEO is about creating pages that are easy for both users and

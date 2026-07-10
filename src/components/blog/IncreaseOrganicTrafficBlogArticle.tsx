@@ -272,6 +272,10 @@ const INTERNAL_LINK_ITEMS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "The Ultimate SEO Guide for Beginners",
     href: "/blog/ultimate-seo-guide-for-beginners",
   },

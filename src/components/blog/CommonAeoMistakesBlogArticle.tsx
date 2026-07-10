@@ -191,6 +191,10 @@ const MISTAKES = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "What Is Answer Engine Optimization (AEO)?",
     href: "/blog/what-is-answer-engine-optimization-aeo",
   },

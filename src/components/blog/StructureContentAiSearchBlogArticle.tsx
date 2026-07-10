@@ -192,6 +192,10 @@ const STRUCTURE_TIPS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "How to Get Featured in AI Search Results",
     href: "/blog/how-to-get-your-business-featured-in-ai-search-results",
   },

@@ -110,6 +110,10 @@ const MISCONCEPTIONS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "How to Increase Organic Traffic Without Paying for Ads",
     href: "/blog/how-to-increase-organic-traffic-without-ads",
   },

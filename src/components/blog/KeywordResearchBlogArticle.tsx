@@ -88,6 +88,10 @@ const TOPIC_CLUSTER_LINKS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "What is SEO and Why Does Your Business Need It?",
     href: "/blog/what-is-seo-why-business-needs-it",
   },
@@ -178,7 +182,11 @@ export function KeywordResearchBlogArticle() {
             <ArticleParagraph>
               In this guide, you&apos;ll learn how to find the right keywords for your business,
               avoid common mistakes, and build an SEO strategy that attracts qualified traffic and
-              drives business growth.
+              drives business growth. AI tools are also changing how keyword research works—see our{" "}
+              <Link href="/blog/how-ai-is-transforming-seo-2026" className={INLINE_LINK}>
+                guide to AI-powered SEO
+              </Link>{" "}
+              for the full picture.
             </ArticleParagraph>
           </div>
 

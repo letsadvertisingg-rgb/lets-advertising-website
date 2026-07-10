@@ -13,6 +13,9 @@ import {
 import type { TocItem } from "@/components/blog/TableOfContents";
 import { BLOG_FAQ_BY_SLUG } from "@/lib/blog/faq";
 
+const INLINE_LINK =
+  "font-semibold text-[var(--brand--brand-electric-blue)] no-underline hover:underline";
+
 const TOC_ITEMS: TocItem[] = [
   { id: "what-is-seo", label: "What Is Traditional SEO?" },
   { id: "what-is-ai-search", label: "What Is AI Search?" },
@@ -104,6 +107,10 @@ const MYTHS = [
 ];
 
 const RELATED_LINKS = [
+  {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
   {
     label: "What is SEO and Why Does Your Business Need It?",
     href: "/blog/what-is-seo-why-business-needs-it",
@@ -365,6 +372,9 @@ export function AiReplaceSeoBlogArticle() {
                 </div>
               ))}
             </div>
+            <Link href="/blog/how-ai-is-transforming-seo-2026" className={`mt-[var(--size--m)] inline-flex ${INLINE_LINK}`}>
+              Read our complete guide on how AI is transforming SEO →
+            </Link>
           </ArticleSection>
 
           <ArticleSection id="seo-vs-aeo" title="SEO vs AEO: Why You Need Both" alt>

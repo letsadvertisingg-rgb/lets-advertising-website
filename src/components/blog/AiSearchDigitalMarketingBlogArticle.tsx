@@ -92,6 +92,10 @@ const WHY_IT_MATTERS = [
 
 const RELATED_LINKS = [
   {
+    label: "How AI is Transforming SEO: The Future of Search in 2026",
+    href: "/blog/how-ai-is-transforming-seo-2026",
+  },
+  {
     label: "What is SEO and Why Does Your Business Need It?",
     href: "/blog/what-is-seo-why-business-needs-it",
   },
@@ -147,7 +151,15 @@ export function AiSearchDigitalMarketingBlogArticle() {
             <ArticleParagraph>
               At Let&apos;s Advertising, we believe businesses that adapt early will be the ones that
               lead the future of digital marketing. Here&apos;s how AI search is reshaping the industry
-              and what you can do to stay ahead.
+              and what you can do to stay ahead. For a detailed look at AI&apos;s impact on SEO
+              specifically, read{" "}
+              <Link
+                href="/blog/how-ai-is-transforming-seo-2026"
+                className="font-semibold text-[var(--brand--brand-electric-blue)] no-underline hover:underline"
+              >
+                How AI is Transforming SEO in 2026
+              </Link>
+              .
             </ArticleParagraph>
           </div>
 

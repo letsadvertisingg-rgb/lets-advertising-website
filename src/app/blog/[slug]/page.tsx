@@ -21,11 +21,13 @@ import { LocalSeoGuideBlogArticle } from "@/components/blog/LocalSeoGuideBlogArt
 import { CommonSeoMistakesBlogArticle } from "@/components/blog/CommonSeoMistakesBlogArticle";
 import { IncreaseOrganicTrafficBlogArticle } from "@/components/blog/IncreaseOrganicTrafficBlogArticle";
 import { UltimateSeoGuideForBeginnersBlogArticle } from "@/components/blog/UltimateSeoGuideForBeginnersBlogArticle";
+import { AiTransformingSeoBlogArticle } from "@/components/blog/AiTransformingSeoBlogArticle";
 import { BLOG_FAQ_BY_SLUG } from "@/lib/blog/faq";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog/posts";
 import { getSiteUrl } from "@/lib/site";
 
 const ARTICLE_COMPONENTS: Record<string, React.ComponentType> = {
+  "how-ai-is-transforming-seo-2026": AiTransformingSeoBlogArticle,
   "ultimate-seo-guide-for-beginners": UltimateSeoGuideForBeginnersBlogArticle,
   "how-to-increase-organic-traffic-without-ads": IncreaseOrganicTrafficBlogArticle,
   "common-seo-mistakes-stop-ranking": CommonSeoMistakesBlogArticle,
