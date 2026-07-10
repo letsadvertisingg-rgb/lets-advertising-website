@@ -238,21 +238,21 @@ export function HeroSection() {
               </span>
             </h1>
             <div className="mx-auto mt-[var(--size--xl)] max-w-[36rem] text-center">
-              <p className="text-white text-[length:var(--typography--text-xl)] max-[767px]:text-[length:var(--typography--text-xl-mobile)] leading-[var(--typography--line-height-l)]">
+              <p className="text-white text-sm max-[767px]:text-xs leading-[var(--typography--line-height-l)]">
                 Running a business is already challenging. Marketing it online shouldn&rsquo;t be.
                 We help businesses attract the right audience, generate quality leads, and turn
                 visitors into paying customers.
               </p>
             </div>
-            <div className="mx-auto mt-[var(--size--2xl)] grid max-w-[23rem] grid-cols-[auto_auto] items-center justify-items-stretch gap-[1rem]">
+            <div className="relative top-20 mx-auto mt-[var(--size--2xl)] grid max-w-[23rem] grid-cols-[auto_auto] items-center justify-items-stretch gap-[1rem]">
               <Link
                 {...bookingLinkProps}
                 aria-label="Free Consultation"
                 className="btn-animate-chars relative inline-flex items-center justify-center gap-[0.5rem] cursor-pointer rounded-[9999px] px-[2rem] py-[1rem] no-underline"
               >
-                <div className="btn-animate-chars__bg absolute inset-0 rounded-[99999px] bg-white" />
+                <div className="btn-animate-chars__bg absolute inset-0 rounded-[99999px] bg-blue-600" />
                 <span
-                  className="relative z-[1] text-black text-[length:var(--typography--button-text-m)] font-semibold leading-[1.5] whitespace-nowrap"
+                  className="relative z-[1] text-white text-[length:var(--typography--button-text-m)] font-semibold leading-[1.5] whitespace-nowrap"
                   style={{ fontVariationSettings: '"wght" 590' }}
                 >
                   <StaggerText text="Free Consultation" />
