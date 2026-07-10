@@ -14,20 +14,20 @@ export function ScaleSection() {
 
           <div className="grid w-full grid-cols-2 max-[991px]:grid-cols-1 gap-[var(--size--xl)]">
             {/* Left: photo card */}
-            <div className="relative flex aspect-[628/628] flex-col overflow-hidden rounded-[var(--radius--radius-xxl)] p-[48px]">
+            <div className="relative flex aspect-[628/628] flex-col overflow-hidden rounded-[var(--radius--radius-xxl)] bg-black p-[48px]">
               <ParallaxImage
-                src="/images/img-69e0fb.webp"
-                className="bg-image-big custom absolute inset-0 h-full w-full rounded-[2rem] object-cover"
+                src="/morevis.jpeg"
+                className="absolute inset-0 h-full w-full rounded-[2rem] object-contain [scale:1]"
                 sizes="100vw"
               />
-              <div className="relative z-[1] flex flex-col items-start justify-start gap-[12px]">
+              {/* <div className="relative z-[1] flex flex-col items-start justify-start gap-[12px]">
                 <div className="font-semibold text-white text-[length:var(--typography--h1)] max-[991px]:text-[length:var(--typography--h1-tablet)] leading-[var(--typography--line-height-s)] tracking-[-0.02em]">
                   More Visibility
                 </div>
                 <div className="text-white text-[length:var(--typography--text-l)] leading-[var(--typography--line-height-l)]">
                   we put your business in front of the right audience
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right: 2x2 inner grid */}
