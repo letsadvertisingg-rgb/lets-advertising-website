@@ -3,6 +3,7 @@ import { getSiteUrl } from "@/lib/site";
 
 /** All crawlers — search engines, social previews, and AI answer engines. */
 const USER_AGENTS = [
+  
   "*",
   "Googlebot",
   "Bingbot",
