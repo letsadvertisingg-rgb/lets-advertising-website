@@ -189,6 +189,10 @@ const BEST_PRACTICES = [
 
 const RELATED_LINKS = [
   {
+    label: "Local SEO Guide for Small Businesses",
+    href: "/blog/local-seo-guide-small-businesses",
+  },
+  {
     label: "What Is Answer Engine Optimization (AEO)?",
     href: "/blog/what-is-answer-engine-optimization-aeo",
   },

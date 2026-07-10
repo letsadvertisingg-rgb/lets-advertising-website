@@ -92,6 +92,10 @@ const WHY_IT_MATTERS = [
 
 const RELATED_LINKS = [
   {
+    label: "What is SEO and Why Does Your Business Need It?",
+    href: "/blog/what-is-seo-why-business-needs-it",
+  },
+  {
     label: "What Is Answer Engine Optimization (AEO)?",
     href: "/blog/what-is-answer-engine-optimization-aeo",
   },

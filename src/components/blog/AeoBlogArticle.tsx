@@ -338,7 +338,14 @@ export function AeoBlogArticle() {
         </div>
         <ArticleParagraph>
           The best digital marketing strategy today combines SEO and AEO rather than choosing one
-          over the other.
+          over the other. If you&apos;re new to search optimization, start with our guide on{" "}
+          <Link
+            href="/blog/what-is-seo-why-business-needs-it"
+            className="font-semibold text-[var(--brand--brand-electric-blue)] no-underline hover:underline"
+          >
+            what SEO is and why your business needs it
+          </Link>
+          .
         </ArticleParagraph>
       </ArticleSection>
 

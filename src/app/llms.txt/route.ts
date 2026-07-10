@@ -16,6 +16,15 @@ function buildLlmsTxt(): string {
 - [Analytics & Tracking](${baseUrl}/analytics-tracking): GA4, Google Tag Manager, dashboards, attribution, CRO analytics, and ecommerce measurement.
 - [AEO Services](${baseUrl}/aeo-services): Answer Engine Optimization for ChatGPT, Google AI Overviews, Gemini, Perplexity, and voice search visibility.
 - [Blog](${baseUrl}/blog): Digital marketing and Answer Engine Optimization guides.
+- [The Ultimate SEO Guide for Beginners](${baseUrl}/blog/ultimate-seo-guide-for-beginners): Complete beginner's SEO guide covering basics, keyword research, on-page, technical, and local SEO in 2026.
+- [How to Increase Organic Traffic Without Paying for Ads](${baseUrl}/blog/how-to-increase-organic-traffic-without-ads): Proven SEO strategies to grow organic website traffic without paid advertising.
+- [Common SEO Mistakes That Stop Your Website from Ranking](${baseUrl}/blog/common-seo-mistakes-stop-ranking): 15 common SEO mistakes and how to fix them to improve Google rankings and organic traffic.
+- [Local SEO Guide for Small Businesses](${baseUrl}/blog/local-seo-guide-small-businesses): How to rank higher in local search, optimize Google Business Profile, and attract nearby customers.
+- [How to Find the Right Keywords for Your Business](${baseUrl}/blog/how-to-find-right-keywords-for-business): Complete keyword research guide for search intent, long-tail keywords, tools, and SEO strategy.
+- [Technical SEO Checklist Every Website Needs](${baseUrl}/blog/technical-seo-checklist-2026): Complete technical SEO checklist for speed, crawlability, indexing, Core Web Vitals, and more.
+- [Complete On-Page SEO Checklist for 2026](${baseUrl}/blog/on-page-seo-checklist-2026): Ultimate on-page SEO checklist for titles, content, images, URLs, internal links, and more.
+- [SEO vs Google Ads: Which One Should You Choose?](${baseUrl}/blog/seo-vs-google-ads): Compare SEO and Google Ads, key differences, benefits, costs, and when to use each or both.
+- [What is SEO and Why Does Your Business Need It?](${baseUrl}/blog/what-is-seo-why-business-needs-it): Guide to Search Engine Optimization, how it works, and why every business needs SEO in 2026.
 - [Common AEO Mistakes Businesses Make](${baseUrl}/blog/common-aeo-mistakes-businesses-make): 10 AEO mistakes to avoid and practical fixes for AI search visibility.
 - [How to Structure Content for AI Search Engines](${baseUrl}/blog/how-to-structure-content-for-ai-search-engines): AI SEO and AEO content structure guide for headings, FAQs, topic clusters, and technical optimization.
 - [The Future of AI Search in 2026](${baseUrl}/blog/future-of-ai-search-2026): AI search trends, AEO strategies, and what businesses need to know in 2026.

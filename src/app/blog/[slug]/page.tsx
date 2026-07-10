@@ -12,11 +12,29 @@ import { AiSearchDigitalMarketingBlogArticle } from "@/components/blog/AiSearchD
 import { AeoBlogArticle } from "@/components/blog/AeoBlogArticle";
 import { OptimizeAiSearchBlogArticle } from "@/components/blog/OptimizeAiSearchBlogArticle";
 import { SeoVsAeoBlogArticle } from "@/components/blog/SeoVsAeoBlogArticle";
+import { WhatIsSeoBlogArticle } from "@/components/blog/WhatIsSeoBlogArticle";
+import { SeoVsGoogleAdsBlogArticle } from "@/components/blog/SeoVsGoogleAdsBlogArticle";
+import { OnPageSeoChecklistBlogArticle } from "@/components/blog/OnPageSeoChecklistBlogArticle";
+import { TechnicalSeoChecklistBlogArticle } from "@/components/blog/TechnicalSeoChecklistBlogArticle";
+import { KeywordResearchBlogArticle } from "@/components/blog/KeywordResearchBlogArticle";
+import { LocalSeoGuideBlogArticle } from "@/components/blog/LocalSeoGuideBlogArticle";
+import { CommonSeoMistakesBlogArticle } from "@/components/blog/CommonSeoMistakesBlogArticle";
+import { IncreaseOrganicTrafficBlogArticle } from "@/components/blog/IncreaseOrganicTrafficBlogArticle";
+import { UltimateSeoGuideForBeginnersBlogArticle } from "@/components/blog/UltimateSeoGuideForBeginnersBlogArticle";
 import { BLOG_FAQ_BY_SLUG } from "@/lib/blog/faq";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog/posts";
 import { getSiteUrl } from "@/lib/site";
 
 const ARTICLE_COMPONENTS: Record<string, React.ComponentType> = {
+  "ultimate-seo-guide-for-beginners": UltimateSeoGuideForBeginnersBlogArticle,
+  "how-to-increase-organic-traffic-without-ads": IncreaseOrganicTrafficBlogArticle,
+  "common-seo-mistakes-stop-ranking": CommonSeoMistakesBlogArticle,
+  "local-seo-guide-small-businesses": LocalSeoGuideBlogArticle,
+  "how-to-find-right-keywords-for-business": KeywordResearchBlogArticle,
+  "technical-seo-checklist-2026": TechnicalSeoChecklistBlogArticle,
+  "on-page-seo-checklist-2026": OnPageSeoChecklistBlogArticle,
+  "seo-vs-google-ads": SeoVsGoogleAdsBlogArticle,
+  "what-is-seo-why-business-needs-it": WhatIsSeoBlogArticle,
   "what-is-answer-engine-optimization-aeo": AeoBlogArticle,
   "seo-vs-aeo-difference": SeoVsAeoBlogArticle,
   "optimize-website-for-chatgpt-google-ai-overviews": OptimizeAiSearchBlogArticle,
