@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { StaggerText } from "@/components/StaggerButton";
 import type { StickyFeaturePanel } from "@/types";
-import { BOOKING_URL } from "@/lib/site";
 
 const PANELS: StickyFeaturePanel[] = [
   {
@@ -12,7 +11,7 @@ const PANELS: StickyFeaturePanel[] = [
     body:
       "Your website is your digital storefront. We create professional, mobile-friendly websites that build trust with visitors, showcase your products and services, generate inquiries and sales, and provide a seamless user experience. More visitors become customers.",
     ctaLabel: "Explore Web Design",
-    ctaHref: BOOKING_URL,
+    ctaHref: "/web-design",
     lottiePath: "",
     backgroundImage: "/images/getty-images-dmznozrpwge-unsplash-1.webp",
   },
@@ -21,7 +20,7 @@ const PANELS: StickyFeaturePanel[] = [
     body:
       "When people search for your services on Google, you should be easy to find. Our SEO services improve your Google rankings, increase organic website traffic, reach customers actively searching for your services, and build long-term online visibility. Result: more qualified visitors without paying for every click.",
     ctaLabel: "Explore SEO",
-    ctaHref: BOOKING_URL,
+    ctaHref: "/seo-services",
     lottiePath: "",
     backgroundImage: "/images/alexander-pozdeev-xxg-vxkrjmq-unsplash-1.webp",
   },

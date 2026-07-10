@@ -10,8 +10,8 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   {
     heading: "Services",
     links: [
-      { label: "Website Design & Development", href: "/#services" },
-      { label: "SEO", href: "/#services" },
+      { label: "Website Design & Development", href: "/web-design" },
+      { label: "SEO", href: "/seo-services" },
       { label: "Answer Engine Optimization (AEO)", href: "/aeo-services" },
       { label: "Social Media Marketing", href: "/social-media-marketing" },
       { label: "Google & Paid Advertising", href: "/paid-advertising" },

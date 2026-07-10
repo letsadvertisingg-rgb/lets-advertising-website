@@ -10,6 +10,8 @@ function buildLlmsTxt(): string {
 ## Primary pages
 
 - [Home](${baseUrl}/): Overview of digital marketing services, process, industries, FAQs, and contact.
+- [Web Design](${baseUrl}/web-design): Custom website design, responsive development, UI/UX, e-commerce, landing pages, redesign, and maintenance.
+- [SEO Services](${baseUrl}/seo-services): SEO audits, keyword research, on-page, technical, local, content, link building, and ecommerce SEO.
 - [Social Media Marketing](${baseUrl}/social-media-marketing): Strategy, management, content, paid social, growth, and influencer marketing across major platforms.
 - [Paid Advertising](${baseUrl}/paid-advertising): Google Ads, Meta, LinkedIn, YouTube, remarketing, and performance-focused campaign management.
 - [Content Marketing](${baseUrl}/content-marketing): SEO content, blogs, website copy, video strategy, email content, and AI-optimized content.

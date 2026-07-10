@@ -11,6 +11,8 @@ type SitemapRoute = {
 /** All public, indexable routes in the app. */
 const SITEMAP_ROUTES: SitemapRoute[] = [
   { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/web-design", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/seo-services", changeFrequency: "monthly", priority: 0.9 },
   { path: "/social-media-marketing", changeFrequency: "monthly", priority: 0.9 },
   { path: "/paid-advertising", changeFrequency: "monthly", priority: 0.9 },
   { path: "/content-marketing", changeFrequency: "monthly", priority: 0.9 },

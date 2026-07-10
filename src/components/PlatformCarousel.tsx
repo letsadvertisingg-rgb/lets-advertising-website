@@ -14,12 +14,14 @@ const SLIDES: PlatformSlide[] = [
     title: "Website Design & Development",
     body: "Your website is your digital storefront. We create professional, mobile-friendly websites that build trust, showcase your services, and generate inquiries. Result: more visitors become customers.",
     image: "/seo/web-design.png",
+    href: "/web-design",
   },
   {
     tag: "SEO",
     title: "Search Engine Optimization",
     body: "When people search for your services on Google, you should be easy to find. We improve your rankings, grow organic traffic, and build long-term visibility. Result: more qualified visitors without paying for every click.",
     image: "/seo/seo.png",
+    href: "/seo-services",
   },
   {
     tag: "AEO",

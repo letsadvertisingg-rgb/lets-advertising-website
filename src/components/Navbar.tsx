@@ -17,12 +17,12 @@ const SERVICES: DdCard[] = [
   {
     label: "Website Design & Development",
     description: "Professional, mobile-friendly websites that turn visitors into customers.",
-    href: "/#services",
+    href: "/web-design",
   },
   {
     label: "SEO",
     description: "Improve your Google rankings and reach customers actively searching for you.",
-    href: "/#services",
+    href: "/seo-services",
   },
   {
     label: "Answer Engine Optimization (AEO)",
