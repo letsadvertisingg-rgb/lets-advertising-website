@@ -5,19 +5,12 @@ import { StaggerText } from "@/components/StaggerButton";
 import { Wordmark } from "@/components/Wordmark";
 import type { FooterColumn } from "@/types";
 import { BOOKING_URL, bookingLinkProps } from "@/lib/site";
+import { SERVICE_NAV_ITEMS } from "@/lib/services";
 
 const FOOTER_COLUMNS: FooterColumn[] = [
   {
     heading: "Services",
-    links: [
-      { label: "Website Design & Development", href: "/web-design" },
-      { label: "SEO", href: "/seo-services" },
-      { label: "Answer Engine Optimization (AEO)", href: "/aeo-services" },
-      { label: "Social Media Marketing", href: "/social-media-marketing" },
-      { label: "Google & Paid Advertising", href: "/paid-advertising" },
-      { label: "Content Marketing", href: "/content-marketing" },
-      { label: "Analytics & Tracking", href: "/analytics-tracking" },
-    ],
+    links: SERVICE_NAV_ITEMS.map(({ label, href }) => ({ label, href })),
   },
   {
     heading: "Industries",

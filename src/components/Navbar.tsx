@@ -6,6 +6,7 @@ import { StaggerText } from "@/components/StaggerButton";
 import { Wordmark } from "@/components/Wordmark";
 import { ChevronDownIcon } from "@/components/icons";
 import { BOOKING_URL, bookingLinkProps } from "@/lib/site";
+import { SERVICE_NAV_ITEMS } from "@/lib/services";
 
 interface DdCard {
   label: string;
@@ -13,43 +14,7 @@ interface DdCard {
   href: string;
 }
 
-const SERVICES: DdCard[] = [
-  {
-    label: "Website Design & Development",
-    description: "Professional, mobile-friendly websites that turn visitors into customers.",
-    href: "/web-design",
-  },
-  {
-    label: "SEO",
-    description: "Improve your Google rankings and reach customers actively searching for you.",
-    href: "/seo-services",
-  },
-  {
-    label: "Answer Engine Optimization (AEO)",
-    description: "Get recommended by ChatGPT, Google AI Overviews, Gemini, and Perplexity.",
-    href: "/aeo-services",
-  },
-  {
-    label: "Social Media Marketing",
-    description: "Build a strong social presence and generate leads where your customers are.",
-    href: "/social-media-marketing",
-  },
-  {
-    label: "Google & Paid Advertising",
-    description: "Reach customers instantly with carefully managed, high-return campaigns.",
-    href: "/paid-advertising",
-  },
-  {
-    label: "Content Marketing",
-    description: "Valuable content that builds credibility and encourages customer action.",
-    href: "/content-marketing",
-  },
-  {
-    label: "Analytics & Tracking",
-    description: "Monthly reports, lead tracking, and complete campaign transparency.",
-    href: "/analytics-tracking",
-  },
-];
+const SERVICES: DdCard[] = SERVICE_NAV_ITEMS;
 
 const INDUSTRIES: DdCard[] = [
   {
@@ -281,14 +246,11 @@ export function Navbar() {
                     {mobileSection === menu.label && (
                       <div className="flex flex-col gap-[0.25rem] pb-[0.875rem]">
                         {menu.cards.map((card) => (
-                          <Link
+                          <DdCardLink
                             key={card.label}
-                            href={card.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="py-[0.375rem] text-white/80 text-[length:var(--typography--text-s)] no-underline"
-                          >
-                            {card.label}
-                          </Link>
+                            card={card}
+                            onNavigate={() => setMobileOpen(false)}
+                          />
                         ))}
                       </div>
                     )}
