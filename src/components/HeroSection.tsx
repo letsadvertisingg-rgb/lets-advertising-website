@@ -7,40 +7,60 @@ import { bookingLinkProps } from "@/lib/site";
 
 const WORDS = ["More Customers.", "More Leads.", "More Sales."];
 
-const MARQUEE_IMAGES = [
-  "/images/img-(2).webp",
-  "/images/img-(3).webp",
-  "/images/img-(8).webp",
-  "/images/img-(4).webp",
-  "/images/img-(7).webp",
-  "/images/img-(9).webp",
-  "/images/img-(1).webp",
-  "/images/img-(4).webp",
-  "/images/img-(8).webp",
-];
+const CHART_LINE =
+  "M0,520 L140,462 L280,490 L480,380 L620,418 L800,280 L920,320 L1100,180 L1220,215 L1440,60";
+const CHART_AREA = `${CHART_LINE} L1440,560 L0,560 Z`;
 
-function MarqueeDiagonal({ position }: { position: "bottom-left" | "bottom-right" | "top-right" }) {
-  const positionClass =
-    position === "bottom-left"
-      ? "bottom-0 left-0"
-      : position === "bottom-right"
-        ? "bottom-0 right-0"
-        : "top-0 right-0";
+function HeroChartSegment({ id }: { id: string }) {
   return (
-    <div
-      className={`absolute ${positionClass} grid h-[150vw] w-[150vw] grid-cols-3 grid-rows-3 gap-[100px]`}
+    <svg
+      className="hero-chart__segment"
+      viewBox="0 0 1440 560"
+      fill="none"
+      preserveAspectRatio="none"
+      aria-hidden="true"
     >
-      {MARQUEE_IMAGES.map((src, i) => (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          key={i}
-          src={src}
-          alt=""
-          sizes="(max-width: 827px) 100vw, 827px"
-          className="aspect-square h-full w-full"
-        />
-      ))}
-    </div>
+      <defs>
+        <linearGradient
+          id={`hero-line-grad-${id}`}
+          x1="0"
+          y1="560"
+          x2="1440"
+          y2="0"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stopColor="#2cb67d" />
+          <stop offset="1" stopColor="#57e5b2" />
+        </linearGradient>
+        <linearGradient id={`hero-area-grad-${id}`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#57e5b2" stopOpacity="0.2" />
+          <stop offset="1" stopColor="#57e5b2" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <path className="hero-chart__area" d={CHART_AREA} fill={`url(#hero-area-grad-${id})`} />
+      <path
+        className="hero-chart__line"
+        d={CHART_LINE}
+        stroke={`url(#hero-line-grad-${id})`}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      <path
+        className="hero-chart__line-tracer"
+        d={CHART_LINE}
+        pathLength={1}
+        stroke="#7cf4c8"
+        strokeWidth="3.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        vectorEffect="non-scaling-stroke"
+      />
+      <circle className="hero-chart__point" cx="480" cy="380" r="4" fill="#57e5b2" />
+      <circle className="hero-chart__point hero-chart__point--alt" cx="1100" cy="180" r="4" fill="#57e5b2" />
+      <circle className="hero-chart__point" cx="1440" cy="60" r="5" fill="#57e5b2" />
+    </svg>
   );
 }
 
@@ -97,22 +117,109 @@ export function HeroSection() {
 
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center bg-black pt-[9.85rem] pb-[var(--size--8xl)]">
-      {/* Diagonal drifting image marquee background */}
+      {/* Hero background: data grid, brand glow, growth chart, floating metrics */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden bg-black">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/bottom-left-shape.svg"
-          alt=""
-          className="absolute bottom-0 left-0 z-[2] max-w-[446px]"
-        />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/top-right-shape.svg" alt="" className="absolute top-0 right-0 z-[2]" />
-        <div className="background-marqee absolute bottom-0 left-0 grid h-[calc(300vw+100px)] w-[calc(300vw+100px)] grid-cols-2 grid-rows-[auto_auto] gap-[16px] opacity-40">
-          <MarqueeDiagonal position="bottom-left" />
-          <MarqueeDiagonal position="bottom-right" />
-          <MarqueeDiagonal position="top-right" />
+        <div className="hero-grid absolute inset-0" />
+        <div className="hero-glow absolute inset-0" />
+
+        {/* Animated growth chart */}
+        <div className="hero-chart absolute inset-x-0 bottom-0 h-[60%]">
+          <HeroChartSegment id="a" />
         </div>
-        <div className="absolute inset-0 z-[1] bg-[linear-gradient(#fff0,#000)]" />
+
+        {/* Floating metric chips */}
+        <div className="hero-chip hero-chip--1 z-[3]">
+          <div className="hero-chip__inner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M3 17l6-6 4 4 8-8"
+                stroke="#57e5b2"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M14 7h7v7"
+                stroke="#57e5b2"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>
+              Organic traffic growth
+            </span>
+          </div>
+        </div>
+        <div className="hero-chip hero-chip--2 z-[3]">
+          <div className="hero-chip__inner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="#6ea8ff" strokeWidth="2" />
+              <path d="M20 20l-3.5-3.5" stroke="#6ea8ff" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            <span>
+              Top Google visibility
+            </span>
+          </div>
+        </div>
+        <div className="hero-chip hero-chip--3 z-[3]">
+          <div className="hero-chip__inner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="4" y="13" width="4" height="7" rx="1" fill="#57e5b2" />
+              <rect x="10" y="9" width="4" height="11" rx="1" fill="#57e5b2" />
+              <rect x="16" y="4" width="4" height="16" rx="1" fill="#57e5b2" />
+            </svg>
+            <span>
+              Strong return on ad spend
+            </span>
+          </div>
+        </div>
+        <div className="hero-chip hero-chip--4 z-[3]">
+          <div className="hero-chip__inner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M4 8.5h16M4 12h16M4 15.5h16"
+                stroke="#57e5b2"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            <span>
+              Lower acquisition costs
+            </span>
+          </div>
+        </div>
+        <div className="hero-chip hero-chip--5 z-[3]">
+          <div className="hero-chip__inner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M12 4v16M4 12h16"
+                stroke="#57e5b2"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+            <span>
+              Better lead quality
+            </span>
+          </div>
+        </div>
+        <div className="hero-chip hero-chip--6 z-[3]">
+          <div className="hero-chip__inner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M4 16l4-4 3 3 5-5 4 4"
+                stroke="#57e5b2"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span>
+              Consistent monthly clicks
+            </span>
+          </div>
+        </div>
       </div>
 
       <div className="relative z-[1] w-full max-w-[var(--container--main-size)] px-[var(--container--size-padding)] mx-auto">
