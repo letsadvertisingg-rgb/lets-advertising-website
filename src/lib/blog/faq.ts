@@ -379,4 +379,544 @@ export const BLOG_FAQ_BY_SLUG: Record<string, FaqItem[]> = {
         "Continue investing in SEO while adopting AEO best practices, improving content quality, implementing structured data, and building topical authority.",
     },
   ],
+"what-is-digital-advertising-complete-guide": [
+    {
+      question: "What is digital advertising?",
+      answer:
+        "Digital advertising is promotional messaging delivered through digital channels such as search engines, social media, websites, apps, streaming services, and connected TV. It includes search ads, display, social, video, programmatic, CTV, retargeting, and shopping ads.",
+    },
+    {
+      question: "How does digital advertising work?",
+      answer:
+        "Most campaigns follow a simple process: define an objective, identify the target audience, select channels, create and launch the campaign, measure performance, and optimize continuously based on data.",
+    },
+    {
+      question: "What are the main types of digital advertising?",
+      answer:
+        "Major types include search advertising, display advertising, social media advertising, video advertising, programmatic advertising, connected TV (CTV) advertising, retargeting, and shopping advertisements.",
+    },
+    {
+      question: "Why is digital advertising effective for businesses?",
+      answer:
+        "Digital advertising is measurable. Advertisers can track impressions, clicks, conversions, revenue, cost per acquisition, and return on ad spend, then make decisions based on data rather than assumptions.",
+    },
+    {
+      question: "What metrics should I track in digital advertising?",
+      answer:
+        "Important metrics include impressions, click-through rate, cost per click, conversion rate, cost per acquisition, and return on ad spend. The right metrics depend on whether your goal is awareness, traffic, or conversions.",
+    },
+  ],
+  "google-ads-vs-meta-ads": [
+    {
+      question: "What is the main difference between Google Ads and Meta Ads?",
+      answer:
+        "Google Ads primarily reaches people who are actively searching for something, while Meta advertising reaches people based on demographics, interests, behaviors, and interactions. Google captures demand; Meta often creates and stimulates demand.",
+    },
+    {
+      question: "When should I use Google Ads?",
+      answer:
+        "Google Ads works well when customers actively search for products or services—such as legal services, insurance, home improvement, software, and other high-intent categories where search advertising captures existing demand.",
+    },
+    {
+      question: "When should I use Meta Ads?",
+      answer:
+        "Meta advertising is effective for products that benefit from visual storytelling and discovery—fashion, beauty, consumer products, fitness, e-commerce, and apps—especially when you need to introduce a brand to people who may not know it yet.",
+    },
+    {
+      question: "Should I use both Google Ads and Meta Ads?",
+      answer:
+        "In many cases, yes. Meta can introduce a product, Google can capture later search demand, and visitors from either channel can be retargeted across platforms as part of a connected customer journey.",
+    },
+    {
+      question: "How do I choose between Google and Meta?",
+      answer:
+        "Ask how customers discover your product, whether they actively search for it, whether it needs education, whether it is visually appealing, how long the buying cycle is, and what customers need before purchasing.",
+    },
+  ],
+  "how-programmatic-advertising-works": [
+    {
+      question: "What is programmatic advertising?",
+      answer:
+        "Programmatic advertising is the automated buying and selling of digital advertising inventory using technology platforms. When an ad opportunity appears, systems evaluate whether it matches campaign criteria and can bid in an auction in milliseconds.",
+    },
+    {
+      question: "What is a DSP and SSP?",
+      answer:
+        "Demand-side platforms (DSPs) help advertisers or agencies manage programmatic campaigns. Supply-side platforms (SSPs) help publishers make inventory available. Ad exchanges facilitate transactions between buyers and sellers.",
+    },
+    {
+      question: "What targeting options does programmatic offer?",
+      answer:
+        "Programmatic can use demographics, geography, interests, behavioral signals, context, device, content environment, and previous website interactions, including contextual targeting and retargeting.",
+    },
+    {
+      question: "Why does brand safety matter in programmatic?",
+      answer:
+        "Advertisers want messages to appear in appropriate environments. Brand safety controls and verification solutions help reduce exposure to undesirable content while frequency management prevents overexposure.",
+    },
+    {
+      question: "Does programmatic automatically create successful campaigns?",
+      answer:
+        "No. Technology alone does not guarantee success. Strong planning, audience strategy, creative, tracking, optimization, and reporting remain essential.",
+    },
+  ],
+  "what-is-performance-marketing": [
+    {
+      question: "What is performance marketing?",
+      answer:
+        "Performance marketing is an advertising approach where success is evaluated using measurable actions and outcomes—such as leads, sales, registrations, or downloads—rather than focusing only on exposure.",
+    },
+    {
+      question: "What channels are used in performance marketing?",
+      answer:
+        "Common channels include search advertising, social advertising, display, programmatic, affiliate marketing, and email marketing. Each can support a different stage of the customer journey.",
+    },
+    {
+      question: "Which metrics matter most in performance marketing?",
+      answer:
+        "Key metrics include cost per acquisition (CPA), conversion rate, return on ad spend (ROAS), customer acquisition cost (CAC), and lifetime value (LTV). The right mix depends on your business goals.",
+    },
+    {
+      question: "Why is tracking so important?",
+      answer:
+        "If conversions are not tracked correctly, optimization decisions may be based on incomplete information. Before launching, define what counts as a conversion and how channels will be evaluated.",
+    },
+    {
+      question: "Is the cheapest channel always the best?",
+      answer:
+        "No. A channel producing fewer leads at a higher cost may generate more revenue if those leads are higher quality. Budgets should be allocated based on business outcomes, not just lowest cost.",
+    },
+  ],
+  "beginners-guide-to-display-advertising": [
+    {
+      question: "What is display advertising?",
+      answer:
+        "Display advertising refers to visual advertisements that appear across websites, apps, and digital platforms. Formats include banners, responsive ads, rich media, native display, interactive ads, and video display.",
+    },
+    {
+      question: "How is display advertising different from search?",
+      answer:
+        "Search advertising is usually driven by intent—someone actively searching. Display is often driven by audience and context, making it useful for awareness and consideration when people are browsing content.",
+    },
+    {
+      question: "What makes effective display creative?",
+      answer:
+        "Effective creative typically includes clear branding, a strong headline, simple messaging, relevant imagery, and a clear call to action—without overcrowding the ad with too much information.",
+    },
+    {
+      question: "What is display retargeting?",
+      answer:
+        "Retargeting reconnects with people who previously visited your site. For example, someone who viewed a product but left without purchasing can later see a reminder ad featuring that product.",
+    },
+    {
+      question: "How do you measure display campaigns?",
+      answer:
+        "Common metrics include impressions, reach, frequency, click-through rate, viewability, conversions, cost per conversion, and revenue. The right metrics depend on campaign objectives.",
+    },
+  ],
+  "ctv-advertising-guide": [
+    {
+      question: "What is CTV advertising?",
+      answer:
+        "Connected TV (CTV) refers to television content delivered through internet-connected devices such as smart TVs and streaming devices. CTV advertising delivers video ads within those streaming environments.",
+    },
+    {
+      question: "How is CTV different from traditional TV?",
+      answer:
+        "Traditional TV often relies on broad programming and audience estimates. CTV can combine the large-screen TV experience with digital capabilities like audience targeting and more flexible measurement.",
+    },
+    {
+      question: "Why are brands investing in CTV?",
+      answer:
+        "CTV helps brands build awareness, reach specific audiences, run targeted campaigns, and connect television with other digital channels as part of an integrated media strategy.",
+    },
+    {
+      question: "How do you measure CTV campaigns?",
+      answer:
+        "Depending on the campaign, advertisers may evaluate impressions, reach, frequency, video completion rate, viewability, website visits, conversions, and brand lift. Measurement should match the objective.",
+    },
+    {
+      question: "Is CTV right for every business?",
+      answer:
+        "CTV can be valuable for brands that want awareness, specific audience reach, product launches, major campaigns, or to complement other digital channels—but fit depends on goals, budget, and creative.",
+    },
+  ],
+  "how-to-build-digital-advertising-strategy": [
+    {
+      question: "What is the first step in building an advertising strategy?",
+      answer:
+        "Start with a clear business objective—leads, sales, awareness, traffic, customer acquisition, or retention. Your advertising strategy should support a specific outcome.",
+    },
+    {
+      question: "How do I choose the right advertising channels?",
+      answer:
+        "Select channels because they fit your audience and objectives—not because they are popular. Options include search, social, display, programmatic, video, CTV, and retargeting.",
+    },
+    {
+      question: "Why is tracking essential before launch?",
+      answer:
+        "Tracking defines which actions matter—form submissions, purchases, calls, downloads, revenue—and how they will be measured. Without it, you cannot optimize confidently.",
+    },
+    {
+      question: "When should I scale a campaign?",
+      answer:
+        "Scale once a campaign shows consistent performance. Increase investment in a controlled way, because rapidly raising budgets can hurt efficiency.",
+    },
+    {
+      question: "Should advertising channels work together?",
+      answer:
+        "Yes. Modern advertising works best when channels are integrated. Search, social, programmatic, video, and CTV can each support different stages of the customer journey.",
+    },
+  ],
+  "cpm-vs-cpc-vs-cpa": [
+    {
+      question: "What does CPM mean?",
+      answer:
+        "CPM stands for Cost Per Mille—cost per thousand impressions. If you pay a $10 CPM, you pay about $10 for every 1,000 impressions. It is commonly used for reach and awareness campaigns.",
+    },
+    {
+      question: "What does CPC mean?",
+      answer:
+        "CPC stands for Cost Per Click—the average amount paid for each click. If a campaign spends $500 and gets 1,000 clicks, the average CPC is $0.50.",
+    },
+    {
+      question: "What does CPA mean?",
+      answer:
+        "CPA stands for Cost Per Acquisition (or Cost Per Action)—how much ad spend is required to generate a conversion. If you spend $1,000 and get 50 conversions, CPA is $20.",
+    },
+    {
+      question: "Which metric is most important: CPM, CPC, or CPA?",
+      answer:
+        "It depends on the objective. Awareness campaigns often prioritize CPM and reach. Traffic campaigns may focus on CPC. Conversion campaigns usually prioritize CPA, conversion rate, revenue, and ROAS.",
+    },
+    {
+      question: "What is ROAS?",
+      answer:
+        "ROAS means Return on Ad Spend. If you spend $1,000 and generate $5,000 in attributable revenue, ROAS is 5x. Also consider margins, CAC, and lifetime value for full context.",
+    },
+  ],
+  "what-is-retargeting-increase-conversions": [
+    {
+      question: "What is retargeting?",
+      answer:
+        "Retargeting is an advertising strategy that reaches people who previously interacted with your website, app, ads, or other digital properties, encouraging them to return and complete a desired action.",
+    },
+    {
+      question: "Why does retargeting work?",
+      answer:
+        "Retargeting audiences have already shown interest—by visiting a site, viewing a product, starting a form, adding to cart, watching a video, or engaging with an ad—so messaging is more relevant.",
+    },
+    {
+      question: "Why is audience segmentation important?",
+      answer:
+        "Not every visitor should see the same ad. Homepage visitors may need a brand message, while product viewers may respond better to product-focused creative. Segmentation improves relevance.",
+    },
+    {
+      question: "Can too much retargeting hurt performance?",
+      answer:
+        "Yes. Excessive frequency can annoy users. Frequency controls help prevent audiences from seeing the same ads too often, and creative should be refreshed regularly.",
+    },
+    {
+      question: "How should retargeting success be measured?",
+      answer:
+        "Look at conversion rate, CPA, revenue, ROAS, CTR, and frequency—and evaluate incremental business value rather than assuming every conversion was caused solely by the ad.",
+    },
+  ],
+  "common-digital-advertising-mistakes": [
+    {
+      question: "What is the most common digital advertising mistake?",
+      answer:
+        "Launching without a clear objective is one of the most common mistakes. Every campaign should define whether the goal is awareness, traffic, leads, sales, or another specific outcome.",
+    },
+    {
+      question: "Why does poor tracking waste ad budget?",
+      answer:
+        "Without accurate conversion tracking, businesses cannot evaluate performance confidently. Tracking should be tested before campaigns launch so optimization decisions are based on real data.",
+    },
+    {
+      question: "Why do landing pages matter for ads?",
+      answer:
+        "An ad cannot fix a confusing landing page. Pages should load quickly, match the ad, communicate value clearly, make the next action obvious, and work well on mobile.",
+    },
+    {
+      question: "Should I change campaigns constantly?",
+      answer:
+        "No. Campaigns need enough time and data to produce useful insights. Constant changes make it hard to know what is actually working.",
+    },
+    {
+      question: "How can I avoid these advertising mistakes?",
+      answer:
+        "Follow a disciplined process: Strategy → Audience Research → Media Planning → Creative → Tracking → Launch → Measurement → Optimization. Test continuously and optimize toward meaningful business outcomes.",
+    },
+  ],
+"ai-advertising-complete-guide": [
+    {
+      question: "What is AI advertising?",
+      answer:
+        "AI advertising is the application of artificial intelligence and machine learning to advertising activities—analyzing audience signals, campaign history, creative performance, conversion behavior, and media costs to support targeting, creative, optimization, and measurement decisions.",
+    },
+    {
+      question: "Does AI replace human advertising strategy?",
+      answer:
+        "No. The strongest approach combines automated intelligence with human judgment, brand knowledge, creative thinking, and business objectives. AI should accelerate decisions where algorithms have an information advantage while strategy stays under human control.",
+    },
+    {
+      question: "Where is AI used in the advertising funnel?",
+      answer:
+        "AI can support planning (audience trends and forecasting), setup (segmentation, bidding, keywords, creative variations), delivery (performance-based adjustments), and post-launch analysis (anomaly detection, reporting, and optimization recommendations).",
+    },
+    {
+      question: "What metrics matter for AI advertising?",
+      answer:
+        "Depending on the campaign, important metrics may include reach, frequency, CTR, conversion rate, CPA, revenue, ROAS, CAC, and lifetime value. The right metric depends on the business objective.",
+    },
+    {
+      question: "What are the risks of AI advertising?",
+      answer:
+        "AI can produce inaccurate outputs, learn from poor-quality data, optimize toward the wrong metric, or create off-brand creative. Strong governance—approval processes, tracking standards, privacy controls, brand guidelines, and testing frameworks—is essential.",
+    },
+  ],
+  "how-ai-is-transforming-digital-advertising-2026": [
+    {
+      question: "How is AI changing digital advertising in 2026?",
+      answer:
+        "In 2026, AI is moving from isolated experiments into connected workflows for audience discovery, creative development, media buying, predictive analysis, personalization, optimization, and reporting.",
+    },
+    {
+      question: "What does AI free marketing teams to focus on?",
+      answer:
+        "By automating reporting, bid adjustments, creative reviews, and audience segmentation, AI helps teams spend more time on strategy, positioning, customer understanding, and creative direction.",
+    },
+    {
+      question: "What is predictive advertising?",
+      answer:
+        "Predictive models estimate future outcomes using historical and current signals—such as conversion likelihood, high-potential audiences, campaign forecasts, and unusual performance changes. Predictions support decisions; they are not guarantees.",
+    },
+    {
+      question: "What do humans still do best in advertising?",
+      answer:
+        "Humans remain essential for brand positioning, emotional storytelling, customer psychology, market context, risk management, and business priorities—capabilities that cannot be reduced to a single optimization score.",
+    },
+    {
+      question: "What gives businesses a competitive advantage with AI ads?",
+      answer:
+        "Combining AI technology with strong advertising fundamentals: clear objectives, relevant audiences, compelling creative, accurate measurement, and disciplined optimization.",
+    },
+  ],
+  "ai-powered-ppc-advertising": [
+    {
+      question: "What is AI PPC advertising?",
+      answer:
+        "AI PPC advertising uses artificial intelligence to support paid search and other pay-per-click activities, including keyword analysis, automated bidding, audience signals, ad copy generation, forecasting, anomaly detection, and optimization.",
+    },
+    {
+      question: "How does AI help with keyword analysis?",
+      answer:
+        "AI can organize search queries, detect themes, identify opportunities, and flag irrelevant traffic. Human review remains important because a keyword can be related to a product yet still be commercially irrelevant.",
+    },
+    {
+      question: "Does automated bidding need good conversion data?",
+      answer:
+        "Yes. Machine-learning bidding systems estimate conversion probability using many signals, but they depend on reliable conversion tracking to optimize effectively.",
+    },
+    {
+      question: "Can AI improve landing page performance for PPC?",
+      answer:
+        "AI-assisted analysis can identify friction such as unclear messaging, weak CTAs, inconsistent offers, or complicated conversion paths. The strongest results come from optimizing the full journey, not only the ad.",
+    },
+    {
+      question: "What are common AI PPC mistakes?",
+      answer:
+        "Activating automation without reliable tracking, optimizing toward weak conversion events, making too many changes at once, and assuming platform recommendations are always correct.",
+    },
+  ],
+  "ai-ad-targeting": [
+    {
+      question: "What is AI ad targeting?",
+      answer:
+        "AI ad targeting uses artificial intelligence and predictive models to evaluate advertising signals and determine which users or environments are likely to be relevant, learning from campaign outcomes over time.",
+    },
+    {
+      question: "Why go beyond demographic targeting?",
+      answer:
+        "Two people with the same age and location can have completely different purchase intent. AI analyzes behavior and contextual signals to create more nuanced predictions.",
+    },
+    {
+      question: "What is contextual AI targeting?",
+      answer:
+        "Contextual intelligence evaluates the content surrounding an advertisement so brands can appear next to relevant topics without relying solely on individual user profiles—useful for content-driven awareness campaigns.",
+    },
+    {
+      question: "How should audience expansion be measured?",
+      answer:
+        "Carefully. A larger audience is not automatically a better audience. Measure expansion against business outcomes such as qualified leads, purchases, revenue, conversion rate, CPA, and customer value.",
+    },
+    {
+      question: "Is privacy important for AI targeting?",
+      answer:
+        "Yes. AI targeting should follow applicable privacy laws, consent requirements, platform rules, and consumer expectations, using appropriate data sources and avoiding unnecessary privacy risks.",
+    },
+  ],
+  "ai-programmatic-advertising": [
+    {
+      question: "What is AI programmatic advertising?",
+      answer:
+        "AI programmatic advertising combines automated media buying with artificial intelligence and machine learning so algorithms can evaluate signals and estimate the potential value of each impression opportunity.",
+    },
+    {
+      question: "How does predictive bidding work?",
+      answer:
+        "AI estimates the probability that an impression will contribute to a campaign objective, then bidding systems use those predictions to decide how aggressively to compete for inventory.",
+    },
+    {
+      question: "Can AI improve programmatic creative performance?",
+      answer:
+        "Yes. When campaigns distribute multiple creative assets, AI can analyze which combinations of message, format, audience, and environment are associated with stronger results.",
+    },
+    {
+      question: "What metrics matter for AI programmatic campaigns?",
+      answer:
+        "Useful metrics include reach, frequency, CPM, viewability, video completion rate, conversions, CPA, revenue, and ROAS—chosen to reflect the campaign objective.",
+    },
+    {
+      question: "What challenges affect AI programmatic advertising?",
+      answer:
+        "Incomplete conversion tracking, poor data, unclear objectives, or automation without appropriate controls. Technology does not eliminate the need for media strategy.",
+    },
+  ],
+  "ai-powered-ad-creative": [
+    {
+      question: "What is AI ad creative?",
+      answer:
+        "AI ad creative refers to advertising content created or optimized with artificial intelligence, including headlines, descriptions, scripts, storyboards, image concepts, video ideas, layouts, and variations.",
+    },
+    {
+      question: "How does AI help with ad copywriting?",
+      answer:
+        "Generative AI can produce multiple message versions quickly across tones, value propositions, audience angles, or CTAs. Human review should verify claims and maintain brand voice.",
+    },
+    {
+      question: "Can AI generate images and video for ads?",
+      answer:
+        "Yes. AI image generation helps explore visual directions, and AI can support video scripts, storyboards, voiceover drafts, and editing—while final assets must meet brand, platform, rights, and quality requirements.",
+    },
+    {
+      question: "Why is brand governance important for AI creative?",
+      answer:
+        "AI-generated content can be inaccurate, inconsistent, or unsuitable for a brand. Brand guidelines, approval workflows, factual review, and compliance checks are essential.",
+    },
+    {
+      question: "Does AI replace human creativity?",
+      answer:
+        "No. AI is an accelerator. Humans provide emotional insight, cultural understanding, positioning, storytelling, and judgment. AI works best when creative professionals direct the system.",
+    },
+  ],
+  "ai-advertising-automation": [
+    {
+      question: "What is AI advertising automation?",
+      answer:
+        "AI advertising automation uses artificial intelligence to assist or automate tasks such as campaign monitoring, bidding, budget management, audience analysis, creative testing, reporting, and optimization.",
+    },
+    {
+      question: "Why does advertising automation matter?",
+      answer:
+        "A human team can review only a limited number of signals at once. Automated systems can monitor many campaigns and identify changes quickly—especially valuable across multiple platforms or large media programs.",
+    },
+    {
+      question: "What can automated monitoring detect?",
+      answer:
+        "Unusual changes in spend, impressions, clicks, conversions, CPA, or revenue—so advertisers can investigate problems before they become larger performance issues.",
+    },
+    {
+      question: "What guardrails should automation have?",
+      answer:
+        "Maximum budgets, minimum performance thresholds, brand-safety requirements, frequency limits, approval processes, and escalation rules so business strategy remains in control.",
+    },
+    {
+      question: "Does automation remove human responsibility?",
+      answer:
+        "No. Humans should define objectives, review important changes, manage brand decisions, evaluate business value, and intervene when automated behavior conflicts with strategy.",
+    },
+  ],
+  "ai-ad-optimization-roas": [
+    {
+      question: "What is AI ad optimization?",
+      answer:
+        "AI ad optimization uses machine learning to improve decisions related to bids, audiences, creative, placements, budgets, and delivery—learning from campaign signals and adapting as conditions change.",
+    },
+    {
+      question: "How does AI improve ROAS?",
+      answer:
+        "For revenue-focused businesses, AI can optimize toward conversion value instead of simply maximizing conversion volume, helping prioritize customers or transactions with greater economic value.",
+    },
+    {
+      question: "Why does data quality matter for AI optimization?",
+      answer:
+        "If conversions are missing, duplicated, incorrectly attributed, or tied to the wrong event, the system may learn the wrong behavior and optimize inefficiently.",
+    },
+    {
+      question: "What is over-optimization?",
+      answer:
+        "Focusing only on short-term performance without considering long-term business value—such as profitability, customer quality, incremental growth, market expansion, and brand impact.",
+    },
+    {
+      question: "How should budget allocation use AI?",
+      answer:
+        "AI can help move budget toward campaigns or audiences with stronger predicted performance, but decisions should also consider scale, seasonality, profitability, and lifetime value.",
+    },
+  ],
+  "generative-ai-advertising": [
+    {
+      question: "What is generative AI advertising?",
+      answer:
+        "Generative AI advertising uses generative artificial intelligence to create or assist with advertising content—including text, visual concepts, scripts, storyboards, and other creative inputs.",
+    },
+    {
+      question: "How does generative AI change ad copy production?",
+      answer:
+        "It can produce many versions of headlines, descriptions, hooks, benefits, and CTAs quickly for multiple audiences or platforms. Human review remains essential for accuracy and brand consistency.",
+    },
+    {
+      question: "What is a responsible generative AI creative workflow?",
+      answer:
+        "Define the objective, establish brand rules, generate concepts, review outputs, refine assets, launch controlled tests, measure results, and feed learnings into the next creative cycle.",
+    },
+    {
+      question: "What risks come with generative AI ads?",
+      answer:
+        "Inaccurate claims, inconsistent language, unsuitable imagery, or content needing additional legal and rights review. Businesses should have approval and quality-control processes.",
+    },
+    {
+      question: "Does more creative variation mean less strategy?",
+      answer:
+        "It should not. More AI-generated variations enable structured testing, but advertisers still need strategic discipline about what variable is changing and which outcome is being evaluated.",
+    },
+  ],
+  "ai-advertising-agency": [
+    {
+      question: "What is an AI advertising agency?",
+      answer:
+        "An AI advertising agency combines advertising strategy with artificial intelligence, automation, machine learning, analytics, and creative technology—covering targeting, PPC, programmatic, creative automation, predictive analytics, optimization, and reporting.",
+    },
+    {
+      question: "How should I evaluate an AI advertising agency?",
+      answer:
+        "Start with business objectives, then ask how the agency uses AI for audience analysis, creative, bidding, optimization, reporting, and automation—and what remains under human control.",
+    },
+    {
+      question: "Why does measurement matter when hiring an AI agency?",
+      answer:
+        "AI requires reliable data. A capable agency needs a clear approach to conversion tracking, data quality, attribution, reporting, and privacy—otherwise advanced technology will not produce reliable conclusions.",
+    },
+    {
+      question: "What are red flags when choosing an AI ads partner?",
+      answer:
+        "Promises of guaranteed AI results, describing AI as a magic solution, inability to explain measurement, or using automation without meaningful strategic oversight.",
+    },
+    {
+      question: "What questions should I ask before hiring?",
+      answer:
+        "Ask which AI tools and workflows are used, which activities are automated, how results are measured, how creative is reviewed, how privacy is handled, and how the agency responds when automated performance declines.",
+    },
+  ],
 };

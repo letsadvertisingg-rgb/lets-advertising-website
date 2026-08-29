@@ -22,11 +22,51 @@ import { CommonSeoMistakesBlogArticle } from "@/components/blog/CommonSeoMistake
 import { IncreaseOrganicTrafficBlogArticle } from "@/components/blog/IncreaseOrganicTrafficBlogArticle";
 import { UltimateSeoGuideForBeginnersBlogArticle } from "@/components/blog/UltimateSeoGuideForBeginnersBlogArticle";
 import { AiTransformingSeoBlogArticle } from "@/components/blog/AiTransformingSeoBlogArticle";
+import { DigitalAdvertisingGuideBlogArticle } from "@/components/blog/DigitalAdvertisingGuideBlogArticle";
+import { GoogleAdsVsMetaAdsBlogArticle } from "@/components/blog/GoogleAdsVsMetaAdsBlogArticle";
+import { ProgrammaticAdvertisingBlogArticle } from "@/components/blog/ProgrammaticAdvertisingBlogArticle";
+import { PerformanceMarketingBlogArticle } from "@/components/blog/PerformanceMarketingBlogArticle";
+import { DisplayAdvertisingBlogArticle } from "@/components/blog/DisplayAdvertisingBlogArticle";
+import { CtvAdvertisingBlogArticle } from "@/components/blog/CtvAdvertisingBlogArticle";
+import { DigitalAdvertisingStrategyBlogArticle } from "@/components/blog/DigitalAdvertisingStrategyBlogArticle";
+import { CpmCpcCpaBlogArticle } from "@/components/blog/CpmCpcCpaBlogArticle";
+import { RetargetingGuideBlogArticle } from "@/components/blog/RetargetingGuideBlogArticle";
+import { DigitalAdvertisingMistakesBlogArticle } from "@/components/blog/DigitalAdvertisingMistakesBlogArticle";
+import { AiAdvertisingCompleteGuideBlogArticle } from "@/components/blog/AiAdvertisingCompleteGuideBlogArticle";
+import { AiTransformingDigitalAdvertisingBlogArticle } from "@/components/blog/AiTransformingDigitalAdvertisingBlogArticle";
+import { AiPpcAdvertisingBlogArticle } from "@/components/blog/AiPpcAdvertisingBlogArticle";
+import { AiAdTargetingBlogArticle } from "@/components/blog/AiAdTargetingBlogArticle";
+import { AiProgrammaticAdvertisingBlogArticle } from "@/components/blog/AiProgrammaticAdvertisingBlogArticle";
+import { AiAdCreativeBlogArticle } from "@/components/blog/AiAdCreativeBlogArticle";
+import { AiAdvertisingAutomationBlogArticle } from "@/components/blog/AiAdvertisingAutomationBlogArticle";
+import { AiAdOptimizationRoasBlogArticle } from "@/components/blog/AiAdOptimizationRoasBlogArticle";
+import { GenerativeAiAdvertisingBlogArticle } from "@/components/blog/GenerativeAiAdvertisingBlogArticle";
+import { AiAdvertisingAgencyBlogArticle } from "@/components/blog/AiAdvertisingAgencyBlogArticle";
 import { BLOG_FAQ_BY_SLUG } from "@/lib/blog/faq";
 import { getBlogPost, getAllBlogSlugs } from "@/lib/blog/posts";
 import { getSiteUrl } from "@/lib/site";
 
 const ARTICLE_COMPONENTS: Record<string, React.ComponentType> = {
+  "ai-advertising-complete-guide": AiAdvertisingCompleteGuideBlogArticle,
+  "how-ai-is-transforming-digital-advertising-2026": AiTransformingDigitalAdvertisingBlogArticle,
+  "ai-powered-ppc-advertising": AiPpcAdvertisingBlogArticle,
+  "ai-ad-targeting": AiAdTargetingBlogArticle,
+  "ai-programmatic-advertising": AiProgrammaticAdvertisingBlogArticle,
+  "ai-powered-ad-creative": AiAdCreativeBlogArticle,
+  "ai-advertising-automation": AiAdvertisingAutomationBlogArticle,
+  "ai-ad-optimization-roas": AiAdOptimizationRoasBlogArticle,
+  "generative-ai-advertising": GenerativeAiAdvertisingBlogArticle,
+  "ai-advertising-agency": AiAdvertisingAgencyBlogArticle,
+  "what-is-digital-advertising-complete-guide": DigitalAdvertisingGuideBlogArticle,
+  "google-ads-vs-meta-ads": GoogleAdsVsMetaAdsBlogArticle,
+  "how-programmatic-advertising-works": ProgrammaticAdvertisingBlogArticle,
+  "what-is-performance-marketing": PerformanceMarketingBlogArticle,
+  "beginners-guide-to-display-advertising": DisplayAdvertisingBlogArticle,
+  "ctv-advertising-guide": CtvAdvertisingBlogArticle,
+  "how-to-build-digital-advertising-strategy": DigitalAdvertisingStrategyBlogArticle,
+  "cpm-vs-cpc-vs-cpa": CpmCpcCpaBlogArticle,
+  "what-is-retargeting-increase-conversions": RetargetingGuideBlogArticle,
+  "common-digital-advertising-mistakes": DigitalAdvertisingMistakesBlogArticle,
   "how-ai-is-transforming-seo-2026": AiTransformingSeoBlogArticle,
   "ultimate-seo-guide-for-beginners": UltimateSeoGuideForBeginnersBlogArticle,
   "how-to-increase-organic-traffic-without-ads": IncreaseOrganicTrafficBlogArticle,
