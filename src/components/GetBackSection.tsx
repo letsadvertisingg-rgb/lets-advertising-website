@@ -7,6 +7,7 @@ interface ProcessStep {
   body: string;
   backgroundImage: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
 }
 
 const STEPS: ProcessStep[] = [
@@ -14,8 +15,9 @@ const STEPS: ProcessStep[] = [
     title: "Step 1: Understand Your Business",
     body:
       "We start by learning your goals, your target audience, your competitors, and your current marketing performance.",
-    backgroundImage: "/images/rectangle-34625056.webp",
-    imageAlt: "Abstract smooth blue waves pattern with gradient shades of blue.",
+    backgroundImage: "/understand.png",
+    imageAlt: "How we understand your business — discover, analyze, and strategize for measurable growth.",
+    imageFit: "contain",
   },
   {
     title: "Step 2: Create a Growth Strategy",
@@ -268,7 +270,7 @@ export function GetBackSection() {
                     src={s.backgroundImage}
                     alt={s.imageAlt}
                     sizes="(max-width: 626px) 100vw, 626px"
-                    className="tab-image-background absolute inset-0 h-full w-full object-cover"
+                    className={`tab-image-background absolute inset-0 h-full w-full ${s.imageFit === "contain" ? "object-contain" : "object-cover"}`}
                   />
                 </div>
               ))}
